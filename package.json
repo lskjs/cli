@@ -1,9 +1,9 @@
 {
   "name": "lsk",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "Igor Suvorov @isuvorov",
   "bin": {
-    "lsk": "./bin/run"
+    "lsk": "bin/run"
   },
   "bugs": "https://github.com/lskjs/cli/issues",
   "dependencies": {
