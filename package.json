@@ -1,16 +1,21 @@
 {
   "name": "lsk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Igor Suvorov @isuvorov",
   "bin": {
     "lsk": "./bin/run"
   },
-  "bugs": "https://github.com/lskjs/lsk/issues",
+  "bugs": "https://github.com/lskjs/cli/issues",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.12.13",
+    "@lskjs/sh": "^2.2.0-beta.13.7",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
-    "kleur": "^4.1.4"
+    "glob": "^7.1.6",
+    "kleur": "^4.1.4",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
@@ -40,8 +45,9 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "lskjs/lsk",
+  "repository": "lskjs/cli",
   "scripts": {
+    "release": "npm version minor && npm publish",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
     "prepack": "oclif-dev manifest && oclif-dev readme",

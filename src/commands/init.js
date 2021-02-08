@@ -1,11 +1,11 @@
 const {Command, flags} = require('@oclif/command')
 const logo = require('fs').readFileSync(__dirname + '/logo.txt').toString()
-const {bold, red, green, blue, yellow} = require('kleur/colors')
+const {bold, red, blue, cyan, yellow, bgYellow} = require('kleur/colors')
 
 const colors = [
   str => bold(red(str)),
-  str => bold(green(str)),
   str => bold(blue(str)),
+  str => bold(cyan(str)),
   str => yellow(str),
 ]
 
@@ -15,7 +15,8 @@ class InitCommand extends Command {
     const name = flags.name || 'world'
     const coloredLogo = logo.split('\n').map(row => {
       return row.split('$').map((str, cellId) => {
-        return colors[cellId] && colors[cellId](str) || ''
+        if (str === '#') return bgYellow(' ')
+        return colors[cellId] && colors[cellId](str.replace(/#/g, bgYellow(' '))) || ''
       }).join('')
     }).join('\n')
     // this.log(logo)
@@ -23,7 +24,7 @@ class InitCommand extends Command {
   }
 }
 
-InitCommand.description = `Init LSK.js project
+InitCommand.description = `Init new LSK.js project
 ...
 Extra documentation goes here
 `

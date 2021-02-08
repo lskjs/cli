@@ -19,7 +19,7 @@ $ npm install -g lsk
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-lsk/0.0.0 darwin-x64 node-v15.6.0
+lsk/1.1.0 darwin-x64 node-v15.6.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -31,6 +31,7 @@ USAGE
 * [`lsk hello`](#lsk-hello)
 * [`lsk help [COMMAND]`](#lsk-help-command)
 * [`lsk init`](#lsk-init)
+* [`lsk run`](#lsk-run)
 
 ## `lsk hello`
 
@@ -48,7 +49,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/hello.js](https://github.com/isuvorov/lsk/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/lskjs/lsk/blob/v1.1.0/src/commands/hello.js)_
 
 ## `lsk help [COMMAND]`
 
@@ -69,7 +70,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2
 
 ## `lsk init`
 
-Describe the command here
+Init LSK.js project
 
 ```
 USAGE
@@ -83,5 +84,23 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/isuvorov/lsk/blob/v0.0.0/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/lsk/blob/v1.1.0/src/commands/init.js)_
+
+## `lsk run`
+
+Describe the command here
+
+```
+USAGE
+  $ lsk run
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/run.js](https://github.com/lskjs/lsk/blob/v1.1.0/src/commands/run.js)_
 <!-- commandsstop -->
