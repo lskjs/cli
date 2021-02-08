@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+const ready = require('@lskjs/utils/polyfill');
+const {shell} = require('@lskjs/sh/shell')
 const {Command, flags} = require('@oclif/command')
 const logo = require('fs').readFileSync(__dirname + '/logo.txt').toString()
 const {bold, red, blue, cyan, yellow, bgYellow} = require('kleur/colors')
@@ -11,8 +14,13 @@ const colors = [
 
 class InitCommand extends Command {
   async run() {
-    const {flags} = this.parse(InitCommand)
-    const name = flags.name || 'world'
+    const {flags, args} = this.parse(InitCommand)
+    const {projectName} = args
+    this.drawLogo()
+    shell(`git clone https://github.com/lskjs/kit.git ${projectName}`)
+  }
+
+  drawLogo() {
     const coloredLogo = logo.split('\n').map(row => {
       return row.split('$').map((str, cellId) => {
         if (str === '#') return bgYellow(' ')
@@ -28,6 +36,13 @@ InitCommand.description = `Init new LSK.js project
 ...
 Extra documentation goes here
 `
+
+InitCommand.args = [
+  {
+    name: 'projectName',
+    required: true,
+  },
+]
 
 InitCommand.flags = {
   name: flags.string({char: 'n', description: 'name to print'}),

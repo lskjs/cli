@@ -1,3 +1,4 @@
+global.__DEV__ = false
 const ready = require('@lskjs/utils/polyfill').default
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs')
@@ -8,12 +9,11 @@ ready()
 class RunCommand extends Command {
   async run() {
     const {flags, args} = this.parse(RunCommand)
-    const {script} = args
+    const {script: npmScriptName} = args
+    const script = npmScriptName.replace(/:/g, '-');
 
     const cwd = process.cwd()
 
-    console.log('cwd', cwd)
-    console.log('process.env.INIT_CWD', process.env.INIT_CWD)
     const isPackage = fs.existsSync(`${cwd}/../../lerna.json`)
     // const isPackage = !isLernaRoot
     const dirname = isPackage ? 'package' : 'run'
@@ -45,8 +45,6 @@ class RunCommand extends Command {
       return this.exit(1)
     }
     // this.error('asdasdasd not found: ', scriptPaths)
-
-    this.log('runnning', scriptPath)
 
     await shell(scriptPath, [], {
       log: this.log.bind(this),

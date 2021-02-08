@@ -10,6 +10,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/runtime": "^7.12.13",
     "@lskjs/sh": "^2.2.0-beta.13.7",
+    "@lskjs/utils": "^2.2.0-beta.20",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
