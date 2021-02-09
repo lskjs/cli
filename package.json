@@ -1,6 +1,6 @@
 {
   "name": "lsk",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "author": "Igor Suvorov @isuvorov",
   "bin": {
     "lsk": "bin/run"
