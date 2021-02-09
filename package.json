@@ -3,7 +3,9 @@
   "bugs": "https://github.com/lskjs/cli/issues",
   "dependencies": {},
   "devDependencies": {
-    "lerna": "3.22.1"
+    "lerna": "3.22.1",
+    "@lskjs/eslint-config": "2.1.0",
+    "eslint": "7.19.0"
   },
   "license": "MIT",
   "scripts": {

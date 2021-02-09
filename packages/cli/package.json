@@ -25,15 +25,11 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "glob": "^7.1.6",
-    "kleur": "^4.1.4",
-    "shelljs": "^0.8.4"
+    "kleur": "^4.1.4"
   },
   "devDependencies": {
-    "@lskjs/eslint-config": "2.1.0",
     "@oclif/dev-cli": "^1",
-    "eslint": "7.19.0",
-    "globby": "^10",
-    "lerna": "^3.22.1"
+    "globby": "^10"
   },
   "files": [
     "/bin",
