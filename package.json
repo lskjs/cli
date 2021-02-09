@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "author": "Igor Suvorov @isuvorov",
   "bin": {
     "lsk": "bin/run"
