@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "release": "lerna publish",
+    "release": "lerna publish --conventional-commits -y",
     "bootstrap": "lerna bootstrap"
   }
 }
