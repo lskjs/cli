@@ -1,4 +1,4 @@
-import { spawn as nativeSpawn } from "child_process";
+const { spawn: nativeSpawn } = require("child_process");
 
 function spawn(command, args = [], options = {}) {
   const {

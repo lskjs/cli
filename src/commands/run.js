@@ -1,7 +1,7 @@
 const { Command } = require("@oclif/command");
 const fs = require("fs");
 const path = require("path");
-const { shell } = require("../../utils");
+const { shell } = require("../utils");
 
 const addExts = (file) => [
   `${file}.sh`,

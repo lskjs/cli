@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const { shell } = require("../../utils");
+const { shell } = require("../utils");
 const { Command } = require("@oclif/command");
 const logo = require("fs").readFileSync(`${__dirname}/logo.txt`).toString();
 const { bold, red, blue, cyan, yellow, bgYellow } = require("kleur/colors");
