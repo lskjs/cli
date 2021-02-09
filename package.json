@@ -51,7 +51,7 @@
     "release": "npm version minor && npm publish",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
-    "prepack": "oclif-dev manifest && oclif-dev readme && cp -R src/utils .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "lint:js": "eslint . --ext .js --fix && prettier --write --plugin-search-dir=.",
     "version": "oclif-dev readme && git add README.md"
