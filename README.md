@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/1.14.0 darwin-x64 node-v15.6.0
+@lskjs/cli/1.15.0 darwin-x64 node-v15.6.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -84,7 +84,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.14.0/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.15.0/src/commands/init.js)_
 
 ## `lsk link FROM TO`
 
@@ -103,7 +103,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v1.14.0/src/commands/link.js)_
+_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v1.15.0/src/commands/link.js)_
 
 ## `lsk run SCRIPT`
 
@@ -112,7 +112,7 @@ USAGE
   $ lsk run SCRIPT
 ```
 
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.14.0/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.15.0/src/commands/run.js)_
 <!-- commandsstop -->
 
 
