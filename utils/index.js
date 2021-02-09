@@ -3,6 +3,7 @@
 /* eslint-disable global-require */
 const { getPaths } = require("./getPaths");
 const { shell } = require("./shell");
+const { run } = require("./run");
 
 const fs = require("fs");
 
@@ -22,15 +23,6 @@ const getLskConfig = () => {
 };
 
 const hasCra = () => fs.existsSync(packagePath("cra"));
-const run = (fn) => {
-  fn().catch((err) => {
-    console.error(`========= ERR (${err.code} ) ========`);
-    if (err.stdout) console.error(err.stdout);
-    if (err.stderr) console.error(err.stderr);
-    console.error("========= ERR ========");
-    process.exit(1);
-  });
-};
 
 module.exports = {
   getPaths,
