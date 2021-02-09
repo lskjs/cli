@@ -19,8 +19,8 @@ class InitCommand extends Command {
     this.drawLogo();
     await shell(`git clone https://github.com/lskjs/kit.git ${projectName}`);
     await shell(`rm -rf ${projectName}/.git`);
-    await shell(`npm i`, [], { cwd: projectName });
-    await shell(`npm run bootstrap`, [], { cwd: projectName });
+    await shell(`npm i`, { cwd: projectName });
+    await shell(`npm run bootstrap`, { cwd: projectName });
     console.log(`============= SUCCESS =============`);
     console.log(`now you should do: cd ${projectName} && npm run dev`);
   }

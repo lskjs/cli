@@ -31,7 +31,7 @@ now you should do: cd test3 && npm run dev
 ```
 <!-- quickstarttop -->
 
-
+![LSK.js – CLI](/blog/init.jpg)
 
 # Usage
 <!-- usage -->
