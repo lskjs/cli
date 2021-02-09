@@ -18,6 +18,6 @@
     "lskjs": "./index.js"
   },
   "dependencies": {
-    "@lskjs/cli": "^1.15.1"
+    "@lskjs/cli": "1.15.1"
   }
 }
