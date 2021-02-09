@@ -1,0 +1,62 @@
+{
+  "name": "@lskjs/cli",
+  "version": "1.13.2",
+  "description": "LSK.js CLI (Command Line Interface) is the easiest way to create and manage LSK.js project",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "keywords": [
+    "lskjs",
+    "lsk",
+    "cli",
+    "helper"
+  ],
+  "license": "MIT",
+  "bugs": "https://github.com/lskjs/cli/issues",
+  "homepage": "https://github.com/lskjs/cli",
+  "repository": "lskjs/cli",
+  "bin": {
+    "lsk": "bin/run",
+    "lskjs": "bin/run"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.12.13",
+    "@lskjs/log2": "2.2.0-beta.13",
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "glob": "^7.1.6",
+    "kleur": "^4.1.4",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@lskjs/eslint-config": "2.1.0",
+    "@oclif/dev-cli": "^1",
+    "eslint": "7.19.0",
+    "globby": "^10",
+    "lerna": "^3.22.1"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src",
+    "/utils.js"
+  ],
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "lsk",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "scripts": {
+    "release": "npm version patch && npm publish && npm publish lsk",
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "lint:js": "eslint . --ext .js --fix && prettier --write --plugin-search-dir=.",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
