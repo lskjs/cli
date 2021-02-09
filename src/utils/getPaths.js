@@ -1,7 +1,6 @@
 /* eslint-disable array-callback-return */
-import path from "path";
+const path = require("path");
 
-require("@lskjs/utils/polyfill");
 const fs = require("fs");
 
 const getPaths = (params = {}) => {
