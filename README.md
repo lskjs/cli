@@ -15,11 +15,11 @@ lsk
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @lsk/cli
+$ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lsk/cli/1.11.0 darwin-x64 node-v15.6.0
+@lskjs/cli/1.11.0 darwin-x64 node-v15.6.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND

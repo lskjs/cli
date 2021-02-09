@@ -1,5 +1,5 @@
 {
-  "name": "@lsk/cli",
+  "name": "@lskjs/cli",
   "version": "1.11.0",
   "author": "Igor Suvorov @isuvorov",
   "bin": {
