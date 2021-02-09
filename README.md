@@ -19,7 +19,7 @@ $ npm install -g lsk
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-lsk/1.4.0 darwin-x64 node-v15.6.0
+lsk/1.5.0 darwin-x64 node-v15.6.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -58,15 +58,12 @@ Init new LSK.js project
 USAGE
   $ lsk init PROJECTNAME
 
-OPTIONS
-  -n, --name=name  name to print
-
 DESCRIPTION
   ...
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.5.0/src/commands/init.js)_
 
 ## `lsk link FROM TO`
 
@@ -77,31 +74,22 @@ USAGE
   $ lsk link FROM TO
 
 OPTIONS
-  -g, --git=git                  watch .git
-  -n, --nodemodules=nodemodules  watch node_modules
+  -g, --git=git                  watch .git folder
+  -n, --nodemodules=nodemodules  watch node_modules folder
 
 DESCRIPTION
   ...
   Extra documentation goes here
 ```
 
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/link.js)_
+_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v1.5.0/src/commands/link.js)_
 
 ## `lsk run SCRIPT`
-
-Describe the command here
 
 ```
 USAGE
   $ lsk run SCRIPT
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
 ```
 
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.5.0/src/commands/run.js)_
 <!-- commandsstop -->
