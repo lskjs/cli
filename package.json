@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "release": "lerna publish && rm -f README.md && cp packages/cli/README.md .",
+    "release": "lerna publish",
     "bootstrap": "lerna bootstrap"
   }
 }
