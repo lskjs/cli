@@ -9,8 +9,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@babel/runtime": "^7.12.13",
-    "@lskjs/sh": "^2.2.0-beta.13.7",
-    "@lskjs/utils": "^2.2.0-beta.20",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
@@ -19,9 +17,9 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
+    "@lskjs/eslint-config": "2.1.0",
     "@oclif/dev-cli": "^1",
     "eslint": "7.19.0",
-    "eslint-config-lskjs": "0.2.0",
     "globby": "^10"
   },
   "engines": {
@@ -51,7 +49,7 @@
     "release": "npm version minor && npm publish",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "prepack": "oclif-dev manifest && oclif-dev readme && cp src/utils src",
     "test": "echo NO TESTS",
     "lint:js": "eslint . --ext .js --fix && prettier --write --plugin-search-dir=.",
     "version": "oclif-dev readme && git add README.md"

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-require("@lskjs/utils/polyfill");
-const { shell } = require("@lskjs/sh/shell");
+const { shell } = require("../../utils");
 const { Command, flags } = require("@oclif/command");
 
 class LinkCommand extends Command {

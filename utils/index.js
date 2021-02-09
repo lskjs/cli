@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 /* eslint-disable global-require */
 const { getPaths } = require("./getPaths");
+const { shell } = require("./shell");
 
 const fs = require("fs");
 
@@ -38,4 +39,5 @@ module.exports = {
   getLskConfig,
   hasCra,
   run,
+  shell,
 };

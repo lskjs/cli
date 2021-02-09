@@ -61,6 +61,24 @@
   dependencies:
     "autobind-decorator" "2.4.0"
 
+"@lskjs/eslint-config@^2.1.0":
+  "integrity" "sha512-iBPWhfURTpyy9fmGfJGI4o7cg59FeNV4iiskWltqcNT2UKodkBy3hkYT/J8mhZF907HqtSNXryCWcIPh/OJiiw=="
+  "resolved" "https://registry.npmjs.org/@lskjs/eslint-config/-/eslint-config-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "4.14.2"
+    "@typescript-eslint/parser" "4.14.2"
+    "eslint" "7.19.0"
+    "eslint-config-airbnb" "18.2.1"
+    "eslint-config-airbnb-base" "14.2.1"
+    "eslint-config-prettier" "7.2.0"
+    "eslint-import-resolver-typescript" "2.3.0"
+    "eslint-plugin-import" "^2.22.1"
+    "eslint-plugin-prettier" "3.3.1"
+    "eslint-plugin-react" "7.22.0"
+    "eslint-plugin-simple-import-sort" "7.0.0"
+    "prettier" "2.2.1"
+
 "@lskjs/sh@^2.2.0-beta.13.7":
   "integrity" "sha512-FXlgSrSvauSEuHbsGtkLUV3a9PL9a8e386iLjvK+XDDk9C9X5kaG8Kso3aX37cvNqWjwquNWZH0+m6jB7+Jj2Q=="
   "resolved" "https://registry.npmjs.org/@lskjs/sh/-/sh-2.2.0-beta.13.7.tgz"

@@ -1,8 +1,7 @@
-require("@lskjs/utils/polyfill");
 const { Command } = require("@oclif/command");
 const fs = require("fs");
 const path = require("path");
-const { shell } = require("@lskjs/sh/shell");
+const { shell } = require("../../utils");
 
 const addExts = (file) => [
   `${file}.sh`,
