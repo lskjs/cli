@@ -19,7 +19,7 @@ $ npm install -g lsk
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-lsk/1.3.0 darwin-x64 node-v15.6.0
+lsk/1.4.0 darwin-x64 node-v15.6.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`lsk help [COMMAND]`](#lsk-help-command)
 * [`lsk init PROJECTNAME`](#lsk-init-projectname)
+* [`lsk link FROM TO`](#lsk-link-from-to)
 * [`lsk run SCRIPT`](#lsk-run-script)
 
 ## `lsk help [COMMAND]`
@@ -65,7 +66,26 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.3.0/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/init.js)_
+
+## `lsk link FROM TO`
+
+Link npm packages and watch changes
+
+```
+USAGE
+  $ lsk link FROM TO
+
+OPTIONS
+  -g, --git=git                  watch .git
+  -n, --nodemodules=nodemodules  watch node_modules
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/link.js)_
 
 ## `lsk run SCRIPT`
 
@@ -83,5 +103,5 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.3.0/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v1.4.0/src/commands/run.js)_
 <!-- commandsstop -->
