@@ -21,7 +21,7 @@
   "devDependencies": {
     "@oclif/dev-cli": "^1",
     "eslint": "7.19.0",
-    "eslint-config-lskjs": "^0.0.1",
+    "eslint-config-lskjs": "0.2.0",
     "globby": "^10"
   },
   "engines": {
