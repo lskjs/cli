@@ -12,7 +12,8 @@ const getPaths = (params = {}) => {
     nodemodules = true,
     name = "",
   } = params;
-  const globalNodemodules = [`${process.env.npm_config_prefix}/lib`];
+
+  const globalNodemodules = [`/usr/local/lib`]; // TODO: npm root -g
   const nodemodulesSuffix = "/node_modules/@lskjs/cli-scripts";
 
   if (!exts) exts = [""];
