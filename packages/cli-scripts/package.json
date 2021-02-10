@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli-scripts",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "LSK.js CLI-scripts – some scripts for LSK.js – CLI projects",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
@@ -12,6 +12,5 @@
   "license": "MIT",
   "bugs": "https://github.com/lskjs/cli/issues",
   "homepage": "https://github.com/lskjs/cli",
-  "repository": "lskjs/cli",
-  "dependencies": {  }
+  "repository": "lskjs/cli"
 }
