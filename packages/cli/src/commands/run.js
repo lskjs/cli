@@ -18,7 +18,7 @@ class RunCommand extends Command {
     const name = `scripts/${dirname}/${script}`;
     const pathOptions = {
       name,
-      exts: [".sh", ".js", "/run.sh", "/run.js"],
+      exts: [".sh", ".js"],
       nodemodules: 1,
     };
     const scriptPath = findPath(pathOptions);

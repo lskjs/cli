@@ -50,6 +50,15 @@ const getPaths = (params = {}) => {
       paths.push(
         ...exts.map((ext) =>
           path.resolve(
+            `${dir}/node_modules/@lskjs/cli/${nodemodulesSuffix}/${name}${ext}`
+          )
+        )
+      );
+    });
+    globalNodemodules.forEach((dir) => {
+      paths.push(
+        ...exts.map((ext) =>
+          path.resolve(
             `${dir}/node_modules/lsk/node_modules/@lskjs/cli/${nodemodulesSuffix}/${name}${ext}`
           )
         )
