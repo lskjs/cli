@@ -1,1 +1,1 @@
-module.exports = require("./src/utils");
+module.exports = require("@lskjs/cli-utils");

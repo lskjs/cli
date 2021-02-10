@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Command } = require("@oclif/command");
-const { drawLogo } = require("../utils");
+const { drawLogo } = require("@lskjs/cli-utils");
 
 class InfoCommand extends Command {
   async run() {

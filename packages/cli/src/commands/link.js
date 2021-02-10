@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { shell } = require("../utils");
+const { shell } = require("@lskjs/cli-utils");
 const { Command, flags } = require("@oclif/command");
 
 class LinkCommand extends Command {

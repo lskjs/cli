@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "lsk": "lsk",
+    "start": "lsk run start",
+    "dev": "lsk run dev",
+    "dev:server": "lsk run dev:server",
+    "dev:cra": "lsk run dev:cra",
+    "dev:cra-and-server": "lsk run dev:cra-and-server",
+    "postversion": "lsk run postversion",
+    "lint:js": "lsk run lint:js",
+    "bootstrap": "lsk run bootstrap",
+    "update": "lsk run update",
+    "build": "lsk run build",
+    "watch": "lsk run watch",
+    "bump": "lsk run bump",
+    "release": "lsk run release",
+    "release:docs": "lsk run release:docs",
+    "storybook": "lsk run storybook",
+    "i18": "lsk run i18",
+    "bootstrap:nodemodules": null,
+    "link": null,
+    "link:me": null,
+    "link:all": null,
+    "styleguide": null,
+    "clear": null
+  }
+}

@@ -18,14 +18,12 @@
     "lskjs": "bin/run"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@babel/runtime": "^7.12.13",
+    "@lskjs/cli-utils": "^1.16.0",
     "@lskjs/log2": "2.2.0-beta.13",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
-    "glob": "^7.1.6",
-    "kleur": "^4.1.4"
+    "glob": "^7.1.6"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
@@ -47,7 +45,6 @@
     ]
   },
   "scripts": {
-    "release": "npm version patch && npm publish && npm publish lsk",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
     "prepack": "oclif-dev manifest && oclif-dev readme",

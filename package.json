@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "DEBUG=* ./packages/cli/bin/run",
     "release": "lerna publish --conventional-commits --exact -y",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "test": "cd packages/cli/tests && ./tests.sh"
   }
 }

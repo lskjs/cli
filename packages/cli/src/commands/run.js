@@ -1,14 +1,6 @@
 const { Command } = require("@oclif/command");
 const fs = require("fs");
-const path = require("path");
-const { shell } = require("../utils");
-
-const addExts = (file) => [
-  `${file}.sh`,
-  `${file}.js`,
-  `${file}/run.sh`,
-  `${file}/run.js`,
-];
+const { shell, findPath, getPaths } = require("@lskjs/cli-utils");
 
 class RunCommand extends Command {
   async run() {
@@ -22,26 +14,17 @@ class RunCommand extends Command {
     const isPackage = fs.existsSync(`${cwd}/../../lerna.json`);
     // const isPackage = !isLernaRoot
     const dirname = isPackage ? "package" : "run";
-    const lernaRootCwd = `${cwd}${isPackage ? "/../.." : ""}`;
-    const lskRootCwd = `${lernaRootCwd}/../lib-starter-kit`;
 
-    const scriptPaths = [
-      ...addExts(`${cwd}/scripts/${dirname}/${script}`),
-      ...(isPackage
-        ? addExts(`${lernaRootCwd}/scripts/${dirname}/${script}`)
-        : []),
-      ...addExts(`${lskRootCwd}/scripts/${dirname}/${script}`),
-      ...addExts(
-        `${lernaRootCwd}/node_modules/lsk/scripts/${dirname}/${script}`
-      ),
-    ].map((a) => path.resolve(a));
-    const filtered = scriptPaths.filter((a) => fs.existsSync(a));
+    const name = `scripts/${dirname}/${script}`;
+    const pathOptions = {
+      name,
+      exts: [".sh", ".js", "/run.sh", "/run.js"],
+      nodemodules: 1,
+    };
+    const scriptPath = findPath(pathOptions);
 
-    // this.log({scriptPaths, filtered})
-
-    const [scriptPath] = filtered;
     if (!scriptPath) {
-      this.log("script path not found in paths: ", scriptPaths);
+      this.log("script path not found in paths: ", getPaths(pathOptions));
       this.error("scriptPath not found");
       this.exit(1);
       return;

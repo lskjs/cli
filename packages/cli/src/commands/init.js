@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const { shell, drawLogo } = require("../utils");
+const { shell, drawLogo } = require("@lskjs/cli-utils");
 const { Command } = require("@oclif/command");
 
 class InitCommand extends Command {
