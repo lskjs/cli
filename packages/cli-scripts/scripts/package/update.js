@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const { shell } = require('@lskjs/cli/utils');
-const { run, hasCra, rootPath, packagePath } = require('@lskjs/cli/utils');
+const { shell } = require('@lskjs/cli-utils');
+const { run, hasCra, rootPath, packagePath } = require('@lskjs/cli-utils');
 
 const main = async () => {
   await shell(

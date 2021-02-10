@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { shell, run, hasCra } = require('@lskjs/cli/utils')
+const { shell, run, hasCra } = require('@lskjs/cli-utils')
 
 const main = async () => {
   await shell('rm -rf release');

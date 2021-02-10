@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const { shell } = require('@lskjs/cli/utils')
-const { run } = require('@lskjs/cli/utils')
+const { shell } = require('@lskjs/cli-utils')
+const { run } = require('@lskjs/cli-utils')
 
 const main = async () => {
   await shell('rm -rf cra/src');

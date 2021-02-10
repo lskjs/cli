@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { run, shell, findPath, packagePath } = require('@lskjs/cli/utils');
+const { run, shell, findPath, packagePath } = require('@lskjs/cli-utils');
 
 const main = async () => {
   const paths = [

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { run, shell } = require('@lskjs/cli/utils');
+const { run, shell } = require('@lskjs/cli-utils');
 
 const projectDir = `${process.env.HOME}/projects`;
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const { shell, run } = require('@lskjs/cli/utils');
+const { shell, run } = require('@lskjs/cli-utils');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const glob = require('glob');
 // eslint-disable-next-line import/no-extraneous-dependencies
