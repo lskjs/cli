@@ -4,20 +4,8 @@ const { run, shell, findPath } = require('@lskjs/cli/utils');
 const findExternal = (name) => findPath({ name, local: 0 });
 
 const main = async () => {
-  const filesPath = findExternal('files');
-  const lightCopyFiles = [
-    '.lskjs.js',
-    '.all-contributorsrc',
-    'docker-stack.yml',
-    'docker-compose.yml',
-    '.gitlab.ci.yml',
-    '.github',
-  ];
-  const exclude = lightCopyFiles.map((file) => `--exclude ${file}`).join(' ');
-  const copy = lightCopyFiles.map((file) => `${filesPath}/${file}`).join(' ');
-  await shell(`rsync -aEp ${exclude} ${filesPath}/ .`);
-  await shell(`rsync -aEp --ignore-existing ${copy} .`);
-
+  await shell(`rsync -aEp ${findExternal('files')}/ .`);
+  await shell(`rsync -aEp --ignore-existing ${findExternal('softFiles')}/ .`);
   // eslint-disable-next-line no-console
   console.log(`
 ===========================================
