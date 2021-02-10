@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/lskjs/cli/compare/v1.15.3...v1.16.0) (2021-02-10)
+
+
+### Bug Fixes
+
+* fix init command ([ccfb686](https://github.com/lskjs/cli/commit/ccfb68632c56b4145cf8a9b4e516317128b6c11a))
+
+
+### Features
+
+* add info for debug, add utils to git ([2a1a807](https://github.com/lskjs/cli/commit/2a1a807c118559834d60cf88eb6a8b7751a28f85))
+
+
+
+
+
 ## [1.15.3](https://github.com/lskjs/cli/compare/v1.15.2...v1.15.3) (2021-02-09)
 
 
