@@ -20,6 +20,7 @@ class RunCommand extends Command {
       name,
       exts: [".sh", ".js"],
       nodemodules: 1,
+      local: 1,
     };
     const scriptPath = findPath(pathOptions);
 

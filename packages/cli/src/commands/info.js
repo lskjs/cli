@@ -12,7 +12,7 @@ class InfoCommand extends Command {
     this.log("Root:    ", this.config.root);
     this.log("Cwd:     ", process.cwd());
     // eslint-disable-next-line no-console
-    if (process.env.USER === "isuvorov") console.log(this.config);
+    if (process.env.DEBUG) console.log(this.config);
   }
 }
 

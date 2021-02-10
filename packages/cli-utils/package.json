@@ -14,6 +14,8 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
+    "@babel/runtime": "7.12.13",
+    "@lskjs/log2": "^2.2.0-beta.13",
     "kleur": "^4.1.4"
   },
   "main": "src/index.js",
