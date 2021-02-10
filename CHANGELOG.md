@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/lskjs/cli/compare/v1.17.0...v1.17.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* npm global path problem ([64e01e1](https://github.com/lskjs/cli/commit/64e01e1f4c889f665f184a9553a86d7bc1fcf153))
+
+
+
+
+
 # [1.17.0](https://github.com/lskjs/cli/compare/v1.16.0...v1.17.0) (2021-02-10)
 
 
