@@ -3,12 +3,13 @@
   "bugs": "https://github.com/lskjs/cli/issues",
   "dependencies": {},
   "devDependencies": {
-    "lerna": "3.22.1",
     "@lskjs/eslint-config": "2.1.0",
-    "eslint": "7.19.0"
+    "eslint": "7.19.0",
+    "lerna": "3.22.1"
   },
   "license": "MIT",
   "scripts": {
+    "dev": "DEBUG=* ./packages/cli/bin/run",
     "release": "lerna publish --conventional-commits --exact -y",
     "bootstrap": "lerna bootstrap"
   }
