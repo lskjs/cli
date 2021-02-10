@@ -18,6 +18,7 @@
     "lskjs": "bin/run"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.13",
     "@lskjs/cli-utils": "1.17.1",
     "@lskjs/log2": "2.2.0-beta.13",
     "@oclif/command": "^1",
