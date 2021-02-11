@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/lskjs/cli/compare/v2.4.0...v2.5.0) (2021-02-11)
+
+
+### Features
+
+* pre beta ([a5ebfac](https://github.com/lskjs/cli/commit/a5ebfac9c5366ede8f9f6336c7af6f88b5e3c348))
+
+
+
+
+
 # [2.4.0](https://github.com/lskjs/cli/compare/v2.3.7...v2.4.0) (2021-02-11)
 
 
