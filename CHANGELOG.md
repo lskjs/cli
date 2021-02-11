@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/lskjs/cli/compare/v2.7.0...v2.7.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* pass npm global path from env ([3fed8a0](https://github.com/lskjs/cli/commit/3fed8a05bea1d261f9174f2a7cf0b7ba387f5299))
+
+
+
+
+
 # [2.7.0](https://github.com/lskjs/cli/compare/v2.6.0...v2.7.0) (2021-02-11)
 
 
