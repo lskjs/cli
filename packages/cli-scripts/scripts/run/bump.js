@@ -3,7 +3,7 @@
 const { run, shell } = require("@lskjs/cli-utils");
 
 const main = async () => {
-  await shell("lerna exec -- lsk run bump");
+  await shell("lerna exec --parallel -- lsk run bump");
 };
 
 run(main);

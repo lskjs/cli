@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 const { run, shell } = require("@lskjs/cli-utils");
 
+// @TODO: extract env file
 const main = async () => {
-  await shell("lerna exec -- lsk run dev:cra");
+  await shell(`lerna exec --parallel --no-prefix -- npm run start`);
 };
 
 run(main);
