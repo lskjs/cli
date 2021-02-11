@@ -4,6 +4,7 @@ const { findPath } = require("./findPath");
 const { findBin } = require("./findBin");
 const { shell } = require("./shell");
 const { run } = require("./run");
+const { replaceAll } = require("./replaceAll");
 const { drawLogo } = require("./drawLogo");
 const { getLskConfig } = require("./getLskConfig");
 const { rootPath } = require("./rootPath");
@@ -28,6 +29,7 @@ module.exports = {
   getLskConfig,
   hasCra,
   run,
+  replaceAll,
   shell,
   drawLogo,
 };

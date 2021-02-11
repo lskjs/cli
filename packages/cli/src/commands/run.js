@@ -1,6 +1,12 @@
 const { Command, flags } = require("@oclif/command");
 const fs = require("fs");
-const { shell, findPath, getPaths, isDebug } = require("@lskjs/cli-utils");
+const {
+  shell,
+  findPath,
+  getPaths,
+  isDebug,
+  replaceAll,
+} = require("@lskjs/cli-utils");
 
 class RunCommand extends Command {
   async run() {
@@ -43,10 +49,11 @@ class RunCommand extends Command {
       error: this.log.bind(this),
       printCommand: (command) => {
         if (isDebug()) return command;
-        return command
-          .replaceAll(`${cwd}/`, "")
-          .replaceAll(cwd, ".")
-          .replaceAll("node_modules/", "");
+        let str = command;
+        str = replaceAll(str, `${cwd}/`, "");
+        str = replaceAll(command, cwd, ".");
+        str = replaceAll(command, "node_modules/", "");
+        return str;
       },
     });
   }

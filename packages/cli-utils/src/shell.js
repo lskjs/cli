@@ -17,7 +17,7 @@ function spawn(command, args = [], options = {}) {
     log = logger.debug.bind(logger), // eslint-disable-line no-console
     error = logger.error.bind(logger), // eslint-disable-line no-console
     fatal = logger.fatal.bind(logger), // eslint-disable-line no-console
-    printCommand = a => a,
+    printCommand = (a) => a,
     // cwd = process.cwd(),
     ...otherOptions
   } = options;
