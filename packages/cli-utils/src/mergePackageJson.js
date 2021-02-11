@@ -1,8 +1,8 @@
 /* eslint-disable import/no-dynamic-require */
 const pickBy = require("lodash/pickBy");
-const omit = require("lodash/omit");
 const isPlainObject = require("lodash/isPlainObject");
 const { omitNull, isNotNull } = require("@lskjs/utils/omitNull");
+const sortPackageJson = require("sort-package-json");
 
 // TODO: отказаться от utils и lodash
 
@@ -16,36 +16,32 @@ const omitNullOrEmpty = (items) =>
 const mergePackageJson = (target, base) => {
   const json = require(target);
   const baseJson = require(base);
-  const newJson = omitNullOrEmpty({
-    ...omit(baseJson, [
-      "scripts",
-      "dependencies",
-      "devDependencies",
-      "peerDependencies",
-      "optionalDependencies",
-    ]),
-    ...json,
-    scripts: omitNull({
-      ...(json.scripts || {}),
-      ...(baseJson.scripts || {}),
-    }),
-    dependencies: omitNull({
-      ...(json.dependencies || {}),
-      ...(baseJson.dependencies || {}),
-    }),
-    devDependencies: omitNull({
-      ...(json.devDependencies || {}),
-      ...(baseJson.devDependencies || {}),
-    }),
-    peerDependencies: omitNull({
-      ...(json.peerDependencies || {}),
-      ...(baseJson.peerDependencies || {}),
-    }),
-    optionalDependencies: omitNull({
-      ...(json.optionalDependencies || {}),
-      ...(baseJson.optionalDependencies || {}),
-    }),
-  });
+  const newJson = sortPackageJson(
+    omitNullOrEmpty({
+      ...baseJson,
+      ...json,
+      scripts: omitNull({
+        ...(json.scripts || {}),
+        ...(baseJson.scripts || {}),
+      }),
+      dependencies: omitNull({
+        ...(json.dependencies || {}),
+        ...(baseJson.dependencies || {}),
+      }),
+      devDependencies: omitNull({
+        ...(json.devDependencies || {}),
+        ...(baseJson.devDependencies || {}),
+      }),
+      peerDependencies: omitNull({
+        ...(json.peerDependencies || {}),
+        ...(baseJson.peerDependencies || {}),
+      }),
+      optionalDependencies: omitNull({
+        ...(json.optionalDependencies || {}),
+        ...(baseJson.optionalDependencies || {}),
+      }),
+    })
+  );
   require("fs").writeFileSync(
     "./package.json",
     JSON.stringify(newJson, null, 2)
