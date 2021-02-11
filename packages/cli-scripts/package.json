@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli-scripts",
-  "version": "1.19.0",
+  "version": "1.19.1",
   "description": "LSK.js CLI-scripts – some scripts for LSK.js – CLI projects",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
@@ -15,6 +15,6 @@
   "repository": "lskjs/cli",
   "dependencies": {
     "@lskjs/babel-preset": "^0.4.0",
-    "@lskjs/cli-utils": "1.19.0"
+    "@lskjs/cli-utils": "1.19.1"
   }
 }
