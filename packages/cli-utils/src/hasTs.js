@@ -1,7 +1,7 @@
 const glob = require("glob");
 
-const hasTs = () => {
-  const list = glob.sync("src/**/**.ts");
+const hasTs = (pattern) => {
+  const list = glob.sync(pattern);
   return !!list;
 };
 

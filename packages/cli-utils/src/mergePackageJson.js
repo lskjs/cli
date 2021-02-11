@@ -16,7 +16,6 @@ const omitNullOrEmpty = (items) =>
 const mergePackageJson = (target, base) => {
   const json = require(target);
   const baseJson = require(base);
-
   const newJson = omitNullOrEmpty({
     ...omit(baseJson, [
       "scripts",
@@ -47,7 +46,6 @@ const mergePackageJson = (target, base) => {
       ...(baseJson.optionalDependencies || {}),
     }),
   });
-
   require("fs").writeFileSync(
     "./package.json",
     JSON.stringify(newJson, null, 2)
