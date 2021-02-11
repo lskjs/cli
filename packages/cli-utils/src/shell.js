@@ -17,13 +17,14 @@ function spawn(command, args = [], options = {}) {
     log = logger.debug.bind(logger), // eslint-disable-line no-console
     error = logger.error.bind(logger), // eslint-disable-line no-console
     fatal = logger.fatal.bind(logger), // eslint-disable-line no-console
+    printCommand = a => a,
     // cwd = process.cwd(),
     ...otherOptions
   } = options;
 
   if (debug) {
     if (packageName && packageName[0] === "/") packageName = null;
-    debug(`${command}`, args.join(" "));
+    debug(`${printCommand(command)}`, args.join(" "));
   }
   return new Promise((resolve, reject) => {
     const proc = nativeSpawn(command, args, otherOptions);
