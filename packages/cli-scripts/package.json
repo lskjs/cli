@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli-scripts",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "LSK.js CLI-scripts – some scripts for LSK.js – CLI projects",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
@@ -14,6 +14,6 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@lskjs/cli-utils": "2.6.0"
+    "@lskjs/cli-utils": "2.7.0"
   }
 }

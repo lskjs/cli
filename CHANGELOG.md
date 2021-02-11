@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/lskjs/cli/compare/v2.6.0...v2.7.0) (2021-02-11)
+
+
+### Features
+
+* replaceAll for old nodejs ([dc69ec2](https://github.com/lskjs/cli/commit/dc69ec268bb311a86bee12d191949f172a568afb))
+
+
+
+
+
 # [2.6.0](https://github.com/lskjs/cli/compare/v2.5.1...v2.6.0) (2021-02-11)
 
 
