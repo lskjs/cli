@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.5.1 darwin-x64 node-v15.8.0
+@lskjs/cli/2.6.0 darwin-x64 node-v15.8.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -50,11 +50,6 @@ USAGE
 # Commands
 <!-- commands -->
 * [`lsk help [COMMAND]`](#lsk-help-command)
-* [`lsk info`](#lsk-info)
-* [`lsk init PROJECTNAME`](#lsk-init-projectname)
-* [`lsk link FROM TO`](#lsk-link-from-to)
-* [`lsk run SCRIPT`](#lsk-run-script)
-* [`lsk update`](#lsk-update)
 
 ## `lsk help [COMMAND]`
 
@@ -72,70 +67,6 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
-
-## `lsk info`
-
-```
-USAGE
-  $ lsk info
-```
-
-_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.5.1/src/commands/info.js)_
-
-## `lsk init PROJECTNAME`
-
-Init new LSK.js project
-
-```
-USAGE
-  $ lsk init PROJECTNAME
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.5.1/src/commands/init.js)_
-
-## `lsk link FROM TO`
-
-Link npm packages and watch changes
-
-```
-USAGE
-  $ lsk link FROM TO
-
-OPTIONS
-  -g, --git=git                  watch .git folder
-  -n, --nodemodules=nodemodules  watch node_modules folder
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.5.1/src/commands/link.js)_
-
-## `lsk run SCRIPT`
-
-```
-USAGE
-  $ lsk run SCRIPT
-
-OPTIONS
-  -e, --explain=explain  explain of path
-```
-
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.5.1/src/commands/run.js)_
-
-## `lsk update`
-
-```
-USAGE
-  $ lsk update
-```
-
-_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.5.1/src/commands/update.js)_
 <!-- commandsstop -->
 
 
