@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env node
 const { run, shell } = require("@lskjs/cli-utils");
 
 // @TODO: extract env file

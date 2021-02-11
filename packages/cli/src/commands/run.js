@@ -1,12 +1,9 @@
 const { Command, flags } = require("@oclif/command");
 const fs = require("fs");
-const { shell, findPath, getPaths } = require("@lskjs/cli-utils");
+const { shell, findPath, getPaths, isDebug } = require("@lskjs/cli-utils");
 
 class RunCommand extends Command {
   async run() {
-    if (process.env.DEBUG) {
-      this.log("> run ");
-    }
     const {
       args: { script: npmScriptName },
       flags: { explain },
@@ -41,9 +38,16 @@ class RunCommand extends Command {
     }
     // this.error('asdasdasd not found: ', scriptPaths)
 
-    await shell(scriptPath, [], {
+    await shell(scriptPath, {
       log: this.log.bind(this),
       error: this.log.bind(this),
+      printCommand: (command) => {
+        if (isDebug()) return command;
+        return command
+          .replaceAll(`${cwd}/`, "")
+          .replaceAll(cwd, ".")
+          .replaceAll("node_modules/", "");
+      },
     });
   }
 }
