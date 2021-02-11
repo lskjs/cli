@@ -10,6 +10,8 @@ class InfoCommand extends Command {
     this.log("System:  ", this.config.userAgent);
     this.log("Path:    ", __dirname);
     this.log("Root:    ", this.config.root);
+    // this.log("Scripts: ", this.config.version);
+    // this.log("Scripts: ", this.config.version);
     this.log("Cwd:     ", process.cwd());
     // eslint-disable-next-line no-console
     if (process.env.DEBUG) console.log(this.config);

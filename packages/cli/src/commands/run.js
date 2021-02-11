@@ -1,11 +1,15 @@
-const { Command } = require("@oclif/command");
+const { Command, flags } = require("@oclif/command");
 const fs = require("fs");
 const { shell, findPath, getPaths } = require("@lskjs/cli-utils");
 
 class RunCommand extends Command {
   async run() {
+    if (process.env.DEBUG) {
+      this.log("> run ");
+    }
     const {
       args: { script: npmScriptName },
+      flags: { explain },
     } = this.parse(RunCommand);
     const script = npmScriptName.replace(/:/g, "-");
 
@@ -22,9 +26,14 @@ class RunCommand extends Command {
       nodemodules: 1,
       local: 1,
     };
+    const paths = getPaths(pathOptions);
     const scriptPath = findPath(pathOptions);
 
-    if (!scriptPath) {
+    if (scriptPath) {
+      if (explain) {
+        this.log(`script path found  ${scriptPath} in paths: `, paths);
+      }
+    } else {
       this.log("script path not found in paths: ", getPaths(pathOptions));
       this.error("scriptPath not found");
       this.exit(1);
@@ -45,5 +54,12 @@ RunCommand.args = [
     required: true,
   },
 ];
+
+RunCommand.flags = {
+  explain: flags.string({
+    char: "e",
+    description: "explain of path",
+  }),
+};
 
 module.exports = RunCommand;
