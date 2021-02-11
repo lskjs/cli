@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.2](https://github.com/lskjs/cli/compare/v2.7.1...v2.7.2) (2021-02-11)
+
+
+### Bug Fixes
+
+* getNpmGlobal ([72080dd](https://github.com/lskjs/cli/commit/72080dd1b946903c3c345834e1e01bad1385f00b))
+
+
+
+
+
 ## [2.7.1](https://github.com/lskjs/cli/compare/v2.7.0...v2.7.1) (2021-02-11)
 
 
