@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/lskjs/cli/compare/v2.3.7...v2.4.0) (2021-02-11)
+
+
+### Features
+
+* hide absolute paths ([a131d6c](https://github.com/lskjs/cli/commit/a131d6c8adc047fcbf240413ce05956e1c54567a))
+
+
+
+
+
 ## [2.3.5](https://github.com/lskjs/cli/compare/v2.3.4...v2.3.5) (2021-02-11)
 
 
