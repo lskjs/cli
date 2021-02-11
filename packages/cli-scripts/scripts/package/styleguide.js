@@ -2,7 +2,7 @@
 const { run, shell } = require("@lskjs/cli-utils");
 
 const main = async () => {
-  await shell("lsk info");
+  await shell("tyleguidist server");
 };
 
 run(main);

@@ -10,19 +10,26 @@ class InitCommand extends Command {
     const {
       args: { projectName },
     } = this.parse(InitCommand);
+    this.log("===== 🚀 Preparing for launght 🚀 =====");
     printInfo(this);
     this.log("============ 🚀 Let's go 🚀 ============");
-    await shell(`git clone https://github.com/lskjs/kit.git ${projectName}`);
-    await shell(`rm -rf ${projectName}/.git`);
+    await shell(
+      `git clone --depth=1 https://github.com/lskjs/kit.git ${projectName}` &&
+        `rm -rf ${projectName}/.git`
+    );
+    this.log("====== 🚀 First stage dropped 🚀 ======");
     const npmInstallParams = isDebug()
       ? ""
       : "--no-fund --no-audit --loglevel=error";
     await shell(`npm i ${npmInstallParams}`, { cwd: projectName });
+    this.log("====== 🚀 Second stage dropped 🚀 ======");
     await shell(`lsk run bootstrap`, { cwd: projectName });
-    console.log(`============= SUCCESS =============`);
-    console.log(`now you should do: cd ${projectName} && npm run dev`);
     this.log("======== 🚀 Landed successful 🚀 =========");
     drawLogo(this);
+    this.log(``);
+    this.log(`now you should do: cd ${projectName} && npm run dev`);
+    this.log(``);
+    this.log(`========= 🚀 CONGRATULATION 🚀 =========`);
   }
 }
 

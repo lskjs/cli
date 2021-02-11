@@ -24,7 +24,8 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "lerna": "^3.22.1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",

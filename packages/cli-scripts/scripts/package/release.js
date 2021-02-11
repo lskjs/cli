@@ -7,4 +7,5 @@ const main = async () => {
   await shell(`npm publish release/`);
   await shell(`lsk run release:after`);
 };
+
 run(main);
