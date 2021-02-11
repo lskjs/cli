@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/lskjs/cli/compare/v2.2.3...v2.3.0) (2021-02-11)
+
+
+### Features
+
+* improve init and rewrite scripts to js ([858cc7e](https://github.com/lskjs/cli/commit/858cc7e3d75b87d7261f52be567534dff8a0594b))
+
+
+
+
+
 ## [2.2.2](https://github.com/lskjs/cli/compare/v2.2.1...v2.2.2) (2021-02-11)
 
 
