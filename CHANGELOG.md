@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.6](https://github.com/lskjs/cli/compare/v2.3.5...v2.3.6) (2021-02-11)
+
+
+### Bug Fixes
+
+* bug with lerna ([9ce04a5](https://github.com/lskjs/cli/commit/9ce04a50dbfe10ee76dae7e32eec02cde1607ba4))
+
+
+
+
+
 ## [2.3.5](https://github.com/lskjs/cli/compare/v2.3.4...v2.3.5) (2021-02-11)
 
 
