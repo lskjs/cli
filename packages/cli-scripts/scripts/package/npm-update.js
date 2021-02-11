@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
-const { run, getLskConfig, shell } = require("@lskjs/cli-utils");
-
-const config = getLskConfig();
+const { run, getLskConfig, shell, findBin } = require("@lskjs/cli-utils");
 
 const main = async () => {
+  const config = getLskConfig();
   const ncu = (config && config.ncu) || {};
   const packages = ncu.packages || "/^@(lskjs)/.*$/";
   try {
@@ -12,7 +10,7 @@ const main = async () => {
       `--dep=${ncu.dep || "prod,dev,peer,optional"}`,
       ncu.newest ? "--target newest" : "",
     ].join(" ");
-    await shell(`ncu -u -l error -e 2 ${params} "${packages}"`);
+    await shell(`${findBin("ncu")} -u -l error -e 2 ${params} "${packages}"`);
   } catch (err) {
     if (err.code === 1) {
       await shell(`npm install`);

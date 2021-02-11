@@ -1,6 +1,7 @@
 const { getPaths } = require("./getPaths");
 const { findPaths } = require("./findPaths");
 const { findPath } = require("./findPath");
+const { findBin } = require("./findBin");
 const { shell } = require("./shell");
 const { run } = require("./run");
 const { drawLogo } = require("./drawLogo");
@@ -21,6 +22,7 @@ module.exports = {
   getPaths,
   findPaths,
   findPath,
+  findBin,
   rootPath,
   packagePath,
   getLskConfig,

@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-const { run, shell } = require("@lskjs/cli-utils");
+const { run, shell, findBin } = require("@lskjs/cli-utils");
 
 const main = async () => {
-  await shell("lerna exec --parallel -- lsk run update");
+  await shell(`${findBin("lerna")} exec --parallel -- lsk run update`);
 };
 
 run(main);
