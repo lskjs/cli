@@ -1,20 +1,13 @@
 #!/usr/bin/env node
 const { Command } = require("@oclif/command");
 const { drawLogo } = require("@lskjs/cli-utils");
+const { printInfo } = require("../utils");
 
 class InfoCommand extends Command {
   async run() {
     // eslint-disable-next-line no-console
     drawLogo(this);
-    this.log("Version: ", this.config.version);
-    this.log("System:  ", this.config.userAgent);
-    this.log("Path:    ", __dirname);
-    this.log("Root:    ", this.config.root);
-    // this.log("Scripts: ", this.config.version);
-    // this.log("Scripts: ", this.config.version);
-    this.log("Cwd:     ", process.cwd());
-    // eslint-disable-next-line no-console
-    if (process.env.DEBUG) console.log(this.config);
+    printInfo(this);
   }
 }
 

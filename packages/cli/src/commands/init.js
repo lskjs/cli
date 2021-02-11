@@ -1,19 +1,23 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 const { shell, drawLogo } = require("@lskjs/cli-utils");
-const { Command } = require("@oclif/command");
+const { Command, isDebug } = require("@oclif/command");
 
 class InitCommand extends Command {
   async run() {
-    const { args } = this.parse(InitCommand);
-    const { projectName } = args;
-    drawLogo(this);
+    const {
+      args: { projectName },
+    } = this.parse(InitCommand);
     await shell(`git clone https://github.com/lskjs/kit.git ${projectName}`);
     await shell(`rm -rf ${projectName}/.git`);
-    await shell(`npm i`, { cwd: projectName });
-    await shell(`npm run bootstrap`, { cwd: projectName });
+    const npmInstallParams = isDebug()
+      ? ""
+      : "--no-fund --no-audit --loglevel=error";
+    await shell(`npm i ${npmInstallParams}`, { cwd: projectName });
+    await shell(`lsk run bootstrap`, { cwd: projectName });
     console.log(`============= SUCCESS =============`);
     console.log(`now you should do: cd ${projectName} && npm run dev`);
+    drawLogo(this);
   }
 }
 

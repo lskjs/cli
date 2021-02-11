@@ -1,11 +1,14 @@
 #!/usr/bin/env node
-const { shell, run } = require('@lskjs/cli-utils');
+const { shell, run, isDebug } = require("@lskjs/cli-utils");
 
 const main = async () => {
-  if (process.env.NODE_ENV === 'production') {
-    await shell('npm ci --loglevel=error');
+  const npmInstallParams = isDebug()
+    ? ""
+    : "--no-fund --no-audit --loglevel=error";
+  if (process.env.NODE_ENV === "production") {
+    await shell(`npm ci ${npmInstallParams}`);
   } else {
-    await shell('npm i --loglevel=error');
+    await shell(`npm i ${npmInstallParams}`);
   }
 };
 

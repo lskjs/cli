@@ -10,4 +10,4 @@ ln -s `pwd`/node_modules ../packages/node_modules && \
 cd .. && \
 echo "=========== Storybook dependencies installed successful ==========="
 fi &&
-lerna exec -- npm run bootstrap
+lerna exec -- lsk run bootstrap
