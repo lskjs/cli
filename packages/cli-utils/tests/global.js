@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
-const { getPaths } = require("../utils");
+const { getPaths, getNpmGlobal } = require("../utils");
 
+console.log("getNpmGlobal()");
+console.log(getNpmGlobal());
 console.log("getPaths()");
 console.log(getPaths());
 

@@ -1,4 +1,5 @@
 /* eslint-disable array-callback-return */
+const { getNpmGlobal } = require("./getNpmGlobal");
 const path = require("path");
 
 const getPaths = (params = {}) => {
@@ -7,16 +8,13 @@ const getPaths = (params = {}) => {
   let { exts } = params;
   const {
     cwd = process.cwd(),
-    dirs = 3,
+    dirs = 4,
     local = true,
     nodemodules = true,
     name = "",
   } = params;
 
-  const globalNodemodules = [
-    process.env.NPM_PACKAGES ? `${process.env.NPM_PACKAGES}/lib` : null,
-    `/usr/local/lib`,
-  ].filter(Boolean); // TODO: npm root -g
+  const globalNodemodules = [getNpmGlobal(), `/usr/local/lib`].filter(Boolean); // TODO: npm root -g
   const nodemodulesSuffix = "/node_modules/@lskjs/cli-scripts";
 
   if (!exts) exts = [""];
