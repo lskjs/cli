@@ -21,6 +21,12 @@ class InitCommand extends Command {
     const npmInstallParams = isDebug()
       ? ""
       : "--no-fund --no-audit --loglevel=error";
+    await shell(
+      `npm i ${npmInstallParams} -g lerna nodemon npm-check-updates`,
+      {
+        cwd: projectName,
+      }
+    );
     await shell(`npm i ${npmInstallParams}`, { cwd: projectName });
     this.log("====== 🚀 Second stage dropped 🚀 ======");
     await shell(`lsk run bootstrap`, { cwd: projectName });
