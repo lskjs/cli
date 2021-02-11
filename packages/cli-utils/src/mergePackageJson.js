@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/no-dynamic-require */
 const pickBy = require("lodash/pickBy");
 const isPlainObject = require("lodash/isPlainObject");
@@ -42,10 +43,14 @@ const mergePackageJson = (target, base) => {
       }),
     })
   );
-  require("fs").writeFileSync(
-    "./package.json",
-    JSON.stringify(newJson, null, 2)
-  );
+  if (newJson) {
+    require("fs").writeFileSync(
+      "./package.json",
+      JSON.stringify(newJson, null, 2)
+    );
+  } else {
+    console.log("!newJson");
+  }
 };
 
 module.exports = {

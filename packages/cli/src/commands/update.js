@@ -7,7 +7,7 @@ class UpdateCommand extends Command {
     await shell("lsk run update:starter-kit");
     await shell("lsk run npm:install");
     await shell("lsk run npm:update");
-    await shell("lsk run npm:bootstrap");
+    await shell("lsk run bootstrap");
   }
 }
 
