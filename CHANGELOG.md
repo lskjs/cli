@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/lskjs/cli/compare/v2.3.2...v2.3.3) (2021-02-11)
+
+
+### Bug Fixes
+
+* add findBin ([025c4eb](https://github.com/lskjs/cli/commit/025c4eb547026d129ce1daa84666916c370d71e0))
+
+
+
+
+
 ## [2.3.2](https://github.com/lskjs/cli/compare/v2.3.1...v2.3.2) (2021-02-11)
 
 
