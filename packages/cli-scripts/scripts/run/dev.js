@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const { run, shell } = require("@lskjs/cli-utils");
+const { run, shell, findBin } = require("@lskjs/cli-utils");
 
 // @TODO: extract env file
 const main = async () => {
-  await shell(`lerna exec --parallel --no-prefix -- npm run dev`);
+  await shell(`${findBin("lerna")} exec --parallel --no-prefix -- npm run dev`);
 };
 
 run(main);
