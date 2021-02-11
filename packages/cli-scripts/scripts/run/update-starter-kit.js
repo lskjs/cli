@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const { run, shell, findPath } = require('@lskjs/cli-utils');
+const { run, shell, findPath } = require("@lskjs/cli-utils");
 
 const findExternal = (name) => findPath({ name, local: 0 });
 
 const main = async () => {
-  await shell(`rsync -aEp ${findExternal('files')}/ .`);
-  await shell(`rsync -aEp --ignore-existing ${findExternal('softFiles')}/ .`);
+  await shell(`rsync -aEp ${findExternal("files")}/ .`);
+  await shell(`rsync -aEp --ignore-existing ${findExternal("softFiles")}/ .`);
   // eslint-disable-next-line no-console
   console.log(`
 ===========================================
