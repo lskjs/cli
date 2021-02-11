@@ -35,7 +35,7 @@ const getPaths = (params = {}) => {
     paths.push(
       ...exts.map((ext) =>
         path.resolve(
-          `${process.env.HOME}/projects/lib-starter-kit/${name}${ext}`
+          `${process.env.HOME}/projects/@lskjs/cli/packages/cli-scripts/${name}${ext}`
         )
       )
     );

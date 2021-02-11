@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-const { shell } = require('@lskjs/cli-utils');
-const { run, getLskConfig } = require('@lskjs/cli-utils');
+const { run, getLskConfig, shell } = require('@lskjs/cli-utils');
 
 const config = getLskConfig();
 

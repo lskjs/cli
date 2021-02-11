@@ -16,7 +16,10 @@
   "dependencies": {
     "@babel/runtime": "7.12.13",
     "@lskjs/log2": "^2.2.0-beta.13",
-    "kleur": "^4.1.4"
+    "@lskjs/utils": "^2.2.0-beta.20",
+    "glob": "^7.1.6",
+    "kleur": "^4.1.4",
+    "lodash": "^4.17.20"
   },
   "main": "src/index.js",
   "scripts": {}

@@ -14,8 +14,6 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@lskjs/cli-utils": "1.17.6",
-    "glob": "^7.1.6",
-    "lodash": "^4.17.20"
+    "@lskjs/cli-utils": "1.17.6"
   }
 }

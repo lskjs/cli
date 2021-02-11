@@ -1,12 +1,12 @@
 {
-  "name": "init",
+  "name": "@lskjs/cra",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-scripts": "3.4.3",
-    "react-app-rewired": "2.1.6"
+    "react": "17.0.1",
+    "react-app-rewired": "2.1.8",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.2"
   },
   "proxy": "http://localhost:8080",
   "scripts": {

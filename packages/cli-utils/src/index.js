@@ -8,8 +8,16 @@ const { getLskConfig } = require("./getLskConfig");
 const { rootPath } = require("./rootPath");
 const { packagePath } = require("./packagePath");
 const { hasCra } = require("./hasCra");
+const { isDev } = require("./isDev");
+const { isDebug } = require("./isDebug");
+const { hasTs } = require("./hasTs");
+const { mergePackageJson } = require("./mergePackageJson");
 
 module.exports = {
+  mergePackageJson,
+  hasTs,
+  isDev,
+  isDebug,
   getPaths,
   findPaths,
   findPath,
