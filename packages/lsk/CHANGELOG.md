@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/lskjs/cli/compare/v2.5.0...v2.5.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* update lsk npx ([5349932](https://github.com/lskjs/cli/commit/5349932ac9ce868f0b3af6eef5b93c750e9f070a))
+
+
+
+
+
 # [2.1.0](https://github.com/lskjs/cli/compare/v1.20.1...v2.1.0) (2021-02-11)
 
 **Note:** Version bump only for package lsk
