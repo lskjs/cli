@@ -10,7 +10,7 @@ const {
 const main = async () => {
   await shell(
     // eslint-disable-next-line max-len
-    "rm -rf .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt .storybook"
+    "rm -rf bump.txt .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt .storybook"
   );
 
   const files = ["tsconfig.json", "tsconfig.types.json", ".babelrc.js"]

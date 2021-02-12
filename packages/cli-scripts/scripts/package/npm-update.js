@@ -13,7 +13,7 @@ const main = async () => {
     await shell(`${findBin("ncu")} -u -l error -e 2 ${params} "${packages}"`);
   } catch (err) {
     if (err.code === 1) {
-      await shell(`npm install`);
+      await shell(`lsk run npm:install`);
       return;
     }
     throw err;
