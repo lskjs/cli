@@ -12,7 +12,7 @@ async function main() {
   await shell(
     `${findBin(
       "babel"
-    )} src --out-dir ${DIST} --source-maps both --extensions ".js,.jsx,.ts,.tsx" ${BUILD_PARAMS}`
+    )} src --out-dir ${DIST} --source-maps true --extensions ".js,.jsx,.ts,.tsx" ${BUILD_PARAMS}`
   );
 
   if (hasTs(`${process.cwd()}/src/**/**.tsx?`)) {
