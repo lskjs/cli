@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/lskjs/cli/compare/v2.7.2...v2.8.0) (2021-02-12)
+
+
+### Features
+
+* improve bootstrap, install and storybook ([8da53dd](https://github.com/lskjs/cli/commit/8da53ddf1556414c79b32998e84b74d57b49fda5))
+
+
+
+
+
 ## [2.7.2](https://github.com/lskjs/cli/compare/v2.7.1...v2.7.2) (2021-02-11)
 
 **Note:** Version bump only for package @lskjs/cli-sample
