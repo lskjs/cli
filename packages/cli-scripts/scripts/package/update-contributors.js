@@ -10,7 +10,6 @@ const main = async () => {
     await shell(`rm -rf scripts/templates/contributors.md`);
     return;
   }
-  console.log({ bin: findBin("all-contributors") });
   await shell(`${findBin("all-contributors")} generate --config ${config}`);
 };
 
