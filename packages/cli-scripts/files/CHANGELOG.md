@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/lskjs/cli/compare/v2.8.1...v2.9.0) (2021-02-14)
+
+
+### Features
+
+* add remark readme generator, fix bugs ([bbaeb32](https://github.com/lskjs/cli/commit/bbaeb328a25ef4ebccb04318470b0587517fd138))
+
+
+
+
+
 ## [2.8.1](https://github.com/lskjs/cli/compare/v2.8.0...v2.8.1) (2021-02-12)
 
 **Note:** Version bump only for package @lskjs/cli-sample
