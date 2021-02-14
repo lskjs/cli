@@ -10,10 +10,17 @@ const {
 
 class RunCommand extends Command {
   async run() {
+    let barePos = this.argv.indexOf("--");
+    if (barePos === -1) {
+      barePos = this.argv.length;
+    }
+    const argv = this.argv.slice(0, barePos);
+    const bareArgv = this.argv.slice(barePos + 1);
+
     const {
       args: { script: npmScriptName },
       flags: { explain },
-    } = this.parse(RunCommand);
+    } = this.parse(RunCommand, argv);
     const script = npmScriptName.replace(/:/g, "-");
 
     const cwd = process.cwd();
@@ -42,9 +49,8 @@ class RunCommand extends Command {
       this.exit(1);
       return;
     }
-    // this.error('asdasdasd not found: ', scriptPaths)
-
-    await shell(scriptPath, {
+    const cmd = [scriptPath, ...bareArgv].join(" ");
+    await shell(cmd, {
       log: this.log.bind(this),
       error: this.log.bind(this),
       printCommand: (command) => {

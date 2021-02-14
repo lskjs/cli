@@ -1,8 +1,6 @@
 {
-  "projectName": "lib-starter-kit",
-  "projectOwner": "isuvorov",
   "repoType": "github",
-  "repoHost": "isuvorov/lib-starter-kit",
+  "repoHost": "lskjs/lskjs",
   "files": [
     "README.md"
   ],
@@ -16,17 +14,11 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/1056977?v=4",
       "profile": "https://isuvorov.com",
       "contributions": [
-        "question",
         "code",
         "design",
-        "doc",
-        "example",
-        "ideas",
-        "review",
-        "test",
-        "a11y"
+        "ideas"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 5
 }

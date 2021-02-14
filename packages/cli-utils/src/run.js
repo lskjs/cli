@@ -5,7 +5,8 @@ const logger = new Logger({
 });
 
 const run = (fn) => {
-  fn().catch((err) => {
+  const [shell, filename, ...argv] = process.argv;
+  fn({ shell, filename, argv }).catch((err) => {
     logger.fatal(`========= ERR${err.code ? ` (${err.code})` : ""} =======`);
     if (!err.code) logger.error(err);
     if (err.stdout) logger.error(err.stdout);
