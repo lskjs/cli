@@ -22,5 +22,7 @@ const main = async () => {
     await shell(`lsk run update:cra`);
   }
   await shell(`lsk run npm:update`);
+  await shell(`lsk run update:contributors`);
+  await shell(`lsk run update:readme`);
 };
 run(main);
