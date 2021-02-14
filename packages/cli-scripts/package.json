@@ -15,6 +15,6 @@
   "repository": "lskjs/cli",
   "dependencies": {
     "@lskjs/cli-utils": "2.9.0",
-    "remark-template": "1.4.0"
+    "remark-template": "1.6.0"
   }
 }
