@@ -3,7 +3,6 @@ const { shell, run, findBin } = require("@lskjs/cli-utils");
 
 const main = async (initParams) => {
   const argv = process.argv.slice(2);
-  console.log({ initParams, argv });
   const params =
     "--cache --cache-location=.cache/eslint --ext .js,.jsx,.json,.ts,.tsx --report-unused-disable-directives";
   await shell(

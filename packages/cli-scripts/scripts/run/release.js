@@ -2,8 +2,10 @@
 /* eslint-disable no-console */
 const { run, shell, findBin } = require("@lskjs/cli-utils");
 
-const main = async () => {
-  await shell(`${findBin("lerna")} publish --skip-npm --exact`);
+const main = async ({ argv } = {}) => {
+  const args = argv.join(" ");
+  await shell(`DIST=release lsk run build`);
+  await shell(`${findBin("lerna")} publish --exact --contents release ${args}`);
   await shell("lsk run release:after");
 };
 
