@@ -20,6 +20,8 @@
 <!-- template file="scripts/templates/install.md" start -->
 <!-- template end -->
 
+-------------------------------
+
 <!-- template file="scripts/templates/body.md" start -->
 <!-- template end -->
 
