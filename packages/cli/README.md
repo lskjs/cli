@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.13.1 darwin-x64 node-v15.8.0
+@lskjs/cli/2.13.2 darwin-x64 node-v15.8.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -80,7 +80,7 @@ USAGE
   $ lsk info
 ```
 
-_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.13.1/src/commands/info.js)_
+_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.13.2/src/commands/info.js)_
 
 ## `lsk init PROJECTNAME`
 
@@ -95,7 +95,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.13.1/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.13.2/src/commands/init.js)_
 
 ## `lsk link FROM TO`
 
@@ -114,7 +114,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.13.1/src/commands/link.js)_
+_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.13.2/src/commands/link.js)_
 
 ## `lsk run SCRIPT`
 
@@ -126,7 +126,7 @@ OPTIONS
   -e, --explain=explain  explain of path
 ```
 
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.13.1/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.13.2/src/commands/run.js)_
 
 ## `lsk update`
 
@@ -135,7 +135,7 @@ USAGE
   $ lsk update
 ```
 
-_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.13.1/src/commands/update.js)_
+_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.13.2/src/commands/update.js)_
 <!-- commandsstop -->
 
 
