@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/lskjs/cli/compare/v2.11.2...v2.12.0) (2021-02-15)
+
+
+### Features
+
+* watch, release ([07e414a](https://github.com/lskjs/cli/commit/07e414abd70e384e892362a816d5e1d31269b6a4))
+
+
+
+
+
 ## [2.11.2](https://github.com/lskjs/cli/compare/v2.11.1...v2.11.2) (2021-02-14)
 
 
