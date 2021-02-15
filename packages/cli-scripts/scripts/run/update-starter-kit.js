@@ -5,7 +5,9 @@ const findExternal = (name) => findPath({ name, local: 0 });
 
 const main = async () => {
   await shell(
-    `rsync -aEp --exclude CHANGELOG.md node_modules ${findExternal("files")}/ .`
+    `rsync -aEp --exclude CHANGELOG.md --exclude node_modules ${findExternal(
+      "files"
+    )}/ .`
   );
   await shell(`rsync -aEp --ignore-existing ${findExternal("softFiles")}/ .`);
   // eslint-disable-next-line no-console
