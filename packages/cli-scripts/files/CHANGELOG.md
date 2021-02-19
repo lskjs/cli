@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/lskjs/cli/compare/v2.13.2...v2.14.0) (2021-02-19)
+
+
+### Features
+
+* add husky, improve deploy and update ([5108f6d](https://github.com/lskjs/cli/commit/5108f6d26c79bd93ba3243333f3ce6a702d452a6))
+
+
+
+
+
 ## [2.13.2](https://github.com/lskjs/cli/compare/v2.13.1...v2.13.2) (2021-02-15)
 
 **Note:** Version bump only for package @lskjs/cli-sample
