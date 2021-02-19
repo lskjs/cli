@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable import/no-dynamic-require */
+const fs = require("fs");
 const { run, findPath, shell } = require("@lskjs/cli-utils");
 const runTemplate = require("remark-template/run");
 const getBaseFile = require("remark-template/getFile");
@@ -35,8 +36,11 @@ const main = async () => {
     nodemodules: 0,
   });
   if (!bodyPath) {
-    await shell(`rm -rf README.md`);
+    // await shell(`rm -rf README.md`);
     return;
+  }
+  if (!fs.existsSync("README.md")) {
+    fs.writeFileSync("README.md", "# init");
   }
   await runTemplate({
     from: "scripts/templates/index.md",

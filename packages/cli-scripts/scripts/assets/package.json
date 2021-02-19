@@ -9,6 +9,7 @@
     "test": "lsk run test",
     "watch": "lsk run watch",
     "storybook": "lsk run storybook",
+    "prepublishOnly": "lsk run prepublishOnly",
     
     "update": null,
     "lint:js": null,
@@ -26,5 +27,6 @@
     "styleguide": null,
     "clear": null
   },
-  "publishConfig": null
+  "publishConfig": null,
+  "gitHead": null
 }

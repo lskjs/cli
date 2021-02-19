@@ -1,12 +1,20 @@
 {
-  "version": "0.1.1",
+  "version": "0.0.1",
   "packages": [
     "packages/*"
   ],
   "command": {
+    "version": {
+      "allowBranch": ["master", "beta"],
+      "conventionalCommits": true,
+      "exact": true,
+      "gitRemote": "upstream",
+      "message": "chore(release): %s"
+    },
     "publish": {
+      "conventionalCommits": true,
       "ignoreChanges": [
-        "**/dist/**",
+        "**/build/**",
         "**/release/**",
         "**/*.md",
         "**/example/**",
