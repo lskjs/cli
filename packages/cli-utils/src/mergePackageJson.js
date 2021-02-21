@@ -42,12 +42,13 @@ const mergePackageJson = (target, base) => {
         ...(json.optionalDependencies || {}),
         ...(baseJson.optionalDependencies || {}),
       }),
+      ...pickBy(baseJson, (a) => !isNotNull(a)),
     })
   );
   if (newJson) {
     require("fs").writeFileSync(
       "./package.json",
-      `${JSON.stringify(omit(newJson, ["gitHead"]), null, 2)}\n`
+      `${JSON.stringify(newJson, null, 2)}\n`
     );
   } else {
     console.log("!newJson");

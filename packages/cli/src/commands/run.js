@@ -25,7 +25,12 @@ class RunCommand extends Command {
 
     const cwd = process.cwd();
 
-    const isPackage = fs.existsSync(`${cwd}/../../lerna.json`);
+    const isRoot = fs.existsSync(`${cwd}/lerna.json`);
+    const isPackage =
+      !isRoot &&
+      (fs.existsSync(`${cwd}/../lerna.json`) ||
+        fs.existsSync(`${cwd}/../../lerna.json`) ||
+        fs.existsSync(`${cwd}/../../../lerna.json`));
     // const isPackage = !isLernaRoot
     const dirname = isPackage ? "package" : "run";
 
