@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/lskjs/cli/compare/v2.14.0...v2.15.0) (2021-02-21)
+
+
+### Features
+
+* improve package merge and fix run package cmd ([363a2b2](https://github.com/lskjs/cli/commit/363a2b23d3aeb3e202032e39aa2dd0e7d827f39d))
+
+
+
+
+
 # [2.14.0](https://github.com/lskjs/cli/compare/v2.13.2...v2.14.0) (2021-02-19)
 
 **Note:** Version bump only for package @lskjs/cli
