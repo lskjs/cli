@@ -7,8 +7,9 @@ const main = async () => {
     await shell("lsk run dev:cra-and-server");
   } else if (fs.existsSync("index.server.js")) {
     await shell("lsk run dev:server");
+  } else if (fs.existsSync("index.js")) {
+    await shell("lsk run dev");
   } else {
-    console.log('@@', process.cwd(), fs.existsSync("./index.server.js"))
     await shell("lsk run watch");
   }
 };
