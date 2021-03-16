@@ -1,1 +1,1 @@
-module.exports = require("./drawLogo");
+module.exports = require('./drawLogo');

@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const { run, shell, findPath } = require("@lskjs/cli-utils");
+const { run, shell, findPath } = require('@lskjs/cli-utils');
 
 const main = async () => {
   const cwd = process.cwd();
-  await shell("rm -rf cra/src cra/public/assets");
+  await shell('rm -rf cra/src cra/public/assets');
   await shell(`ln -s ${cwd}/src ${cwd}/cra/src`);
-  const publicAssets = findPath("public/assets");
+  const publicAssets = findPath('public/assets');
   if (publicAssets) {
     await shell(`cp -R ${publicAssets} cra/public/assets`);
   } else {
-    console.log("public/assets not found, ignoring copy to cra/public/assets");
+    console.log('public/assets not found, ignoring copy to cra/public/assets');
   }
-  await shell("SKIP_PREFLIGHT_CHECK=true npm start", { cwd: "cra" });
+  await shell('SKIP_PREFLIGHT_CHECK=true npm start', { cwd: 'cra' });
 };
 
 run(main);

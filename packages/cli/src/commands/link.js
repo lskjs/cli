@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { shell } = require("@lskjs/cli-utils");
-const { Command, flags } = require("@oclif/command");
+const { shell } = require('@lskjs/cli-utils');
+const { Command, flags } = require('@oclif/command');
 
 class LinkCommand extends Command {
   async run() {
@@ -12,15 +12,10 @@ class LinkCommand extends Command {
     // # https://github.com/watchexec/watchexec
     // # `brew install watchexec`
 
-    const excludes = [
-      !nodemodules ? "--exclude node_modules" : null,
-      !git ? "--exclude .git" : null,
-    ]
+    const excludes = [!nodemodules ? '--exclude node_modules' : null, !git ? '--exclude .git' : null]
       .filter(Boolean)
-      .join(" ");
-    await shell(
-      `watchexec -r -w ${from} --signal SIGTERM -- rsync -aE --progress ${excludes} ${from}/ ${to}`
-    );
+      .join(' ');
+    await shell(`watchexec -r -w ${from} --signal SIGTERM -- rsync -aE --progress ${excludes} ${from}/ ${to}`);
   }
 }
 
@@ -31,21 +26,21 @@ Extra documentation goes here
 
 LinkCommand.args = [
   {
-    name: "from",
+    name: 'from',
     required: true,
   },
   {
-    name: "to",
+    name: 'to',
     required: true,
   },
 ];
 
 LinkCommand.flags = {
   nodemodules: flags.string({
-    char: "n",
-    description: "watch node_modules folder",
+    char: 'n',
+    description: 'watch node_modules folder',
   }),
-  git: flags.string({ char: "g", description: "watch .git folder" }),
+  git: flags.string({ char: 'g', description: 'watch .git folder' }),
 };
 
 module.exports = LinkCommand;

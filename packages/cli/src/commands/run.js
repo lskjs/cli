@@ -1,16 +1,10 @@
-const { Command, flags } = require("@oclif/command");
-const fs = require("fs");
-const {
-  shell,
-  findPath,
-  getPaths,
-  isDebug,
-  replaceAll,
-} = require("@lskjs/cli-utils");
+const { Command, flags } = require('@oclif/command');
+const fs = require('fs');
+const { shell, findPath, getPaths, isDebug, replaceAll } = require('@lskjs/cli-utils');
 
 class RunCommand extends Command {
   async run() {
-    let barePos = this.argv.indexOf("--");
+    let barePos = this.argv.indexOf('--');
     if (barePos === -1) {
       barePos = this.argv.length;
     }
@@ -21,7 +15,7 @@ class RunCommand extends Command {
       args: { script: npmScriptName },
       flags: { explain },
     } = this.parse(RunCommand, argv);
-    const script = npmScriptName.replace(/:/g, "-");
+    const script = npmScriptName.replace(/:/g, '-');
 
     const cwd = process.cwd();
 
@@ -32,12 +26,12 @@ class RunCommand extends Command {
         fs.existsSync(`${cwd}/../../lerna.json`) ||
         fs.existsSync(`${cwd}/../../../lerna.json`));
     // const isPackage = !isLernaRoot
-    const dirname = isPackage ? "package" : "run";
+    const dirname = isPackage ? 'package' : 'run';
 
     const name = `scripts/${dirname}/${script}`;
     const pathOptions = {
       name,
-      exts: [".sh", ".js"],
+      exts: ['.sh', '.js'],
       nodemodules: 1,
       local: 1,
     };
@@ -49,21 +43,21 @@ class RunCommand extends Command {
         this.log(`script path found  ${scriptPath} in paths: `, paths);
       }
     } else {
-      this.log("script path not found in paths: ", getPaths(pathOptions));
-      this.error("scriptPath not found");
+      this.log('script path not found in paths: ', getPaths(pathOptions));
+      this.error('scriptPath not found');
       this.exit(1);
       return;
     }
-    const cmd = [scriptPath, ...bareArgv].join(" ");
+    const cmd = [scriptPath, ...bareArgv].join(' ');
     await shell(cmd, {
       log: this.log.bind(this),
       error: this.log.bind(this),
       printCommand: (command) => {
         if (isDebug()) return command;
         let str = command;
-        str = replaceAll(str, `${cwd}/`, "");
-        str = replaceAll(command, cwd, ".");
-        str = replaceAll(command, "node_modules/", "");
+        str = replaceAll(str, `${cwd}/`, '');
+        str = replaceAll(command, cwd, '.');
+        str = replaceAll(command, 'node_modules/', '');
         return str;
       },
     });
@@ -72,15 +66,15 @@ class RunCommand extends Command {
 
 RunCommand.args = [
   {
-    name: "script",
+    name: 'script',
     required: true,
   },
 ];
 
 RunCommand.flags = {
   explain: flags.string({
-    char: "e",
-    description: "explain of path",
+    char: 'e',
+    description: 'explain of path',
   }),
 };
 

@@ -1,15 +1,15 @@
-const { spawn: nativeSpawn } = require("child_process");
-const { Logger } = require("@lskjs/log2");
+const { spawn: nativeSpawn } = require('child_process');
+const { Logger } = require('@lskjs/log2');
 
 // https://github.com/shelljs/shelljs/issues/86
 // https://docs.google.com/document/d/1UFm10TONaNWok3aEPzUP_OjZ6lEvwlYqyJBUcugLfso/edit#heading=h.u8gil4dopy47
 
 function spawn(command, args = [], options = {}) {
   const cwd = process.cwd();
-  let [packageName] = cwd.split("/packages/").reverse();
-  if (packageName[0] === "/") packageName = null;
+  let [packageName] = cwd.split('/packages/').reverse();
+  if (packageName[0] === '/') packageName = null;
   const logger = new Logger({
-    ns: "cli",
+    ns: 'cli',
     name: packageName,
   });
   const {
@@ -23,24 +23,24 @@ function spawn(command, args = [], options = {}) {
   } = options;
 
   if (debug) {
-    if (packageName && packageName[0] === "/") packageName = null;
-    debug(`${printCommand(command)}`, args.join(" "));
+    if (packageName && packageName[0] === '/') packageName = null;
+    debug(`${printCommand(command)}`, args.join(' '));
   }
   return new Promise((resolve, reject) => {
     const proc = nativeSpawn(command, args, otherOptions);
     if (proc.stdout) {
-      proc.stdout.on("data", (data) => {
+      proc.stdout.on('data', (data) => {
         const res = data.toString().trim();
         if (log) log(res);
       });
     }
     if (proc.stderr) {
-      proc.stderr.on("data", (data) => {
+      proc.stderr.on('data', (data) => {
         const res = data.toString().trim();
         if (error) error(res);
       });
     }
-    proc.on("exit", (code) => {
+    proc.on('exit', (code) => {
       // if (trace) {
       // trace("<<<", command, args.join(" "));
       // }
@@ -56,7 +56,7 @@ function shell(command, initOptions = {}) {
   const { args = [], ...options } = initOptions;
   return spawn(command, args, {
     shell: true,
-    stdio: "inherit",
+    stdio: 'inherit',
     ...options,
   });
 }

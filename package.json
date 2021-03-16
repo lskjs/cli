@@ -1,17 +1,19 @@
 {
   "author": "Igor Suvorov @isuvorov",
   "bugs": "https://github.com/lskjs/cli/issues",
-  "dependencies": {},
   "devDependencies": {
-    "@lskjs/eslint-config": "2.1.0",
-    "eslint": "7.19.0",
-    "lerna": "3.22.1"
+    "@lskjs/eslint-config": "2.2.0",
+    "eslint": "7.22.0",
+    "lerna": "4.0.0",
+    "typescript": "^4.2.3"
   },
   "license": "MIT",
   "scripts": {
     "dev": "DEBUG=* ./packages/cli/bin/run",
     "release": "lerna publish --conventional-commits --exact -y",
     "bootstrap": "lerna bootstrap",
-    "test": "cd packages/cli-utils/tests && ./tests.sh"
+    "test": "cd packages/cli-utils/tests && ./tests.sh",
+    "eslint": "eslint --ext .js,.jsx .",
+    "eslint:fix": "npm run eslint -- --fix"
   }
 }

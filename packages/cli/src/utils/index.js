@@ -1,3 +1,3 @@
-const { printInfo } = require("./printInfo");
+const { printInfo } = require('./printInfo');
 
 module.exports = { printInfo };

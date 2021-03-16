@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { run, shell, findBin } = require("@lskjs/cli-utils");
+const { run, shell, findBin } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell(`${findBin("lerna")} exec --parallel -- lsk run bump`);
+  await shell(`${findBin('lerna')} exec --parallel -- lsk run bump`);
 };
 
 run(main);

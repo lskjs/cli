@@ -1,1 +1,1 @@
-const { getPaths } = require("../../../../../src");
+const { getPaths } = require('../../../../../src');

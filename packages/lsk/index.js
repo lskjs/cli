@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require("@lskjs/cli/bin/run");
+require('@lskjs/cli/bin/run');

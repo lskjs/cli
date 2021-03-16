@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable array-callback-return */
-const { findPath } = require("./findPath");
+const { findPath } = require('./findPath');
 
 const getLskConfig = (options = {}) => {
   const path = findPath({
-    name: ".lskjs",
-    exts: [".js", ".json"],
+    name: '.lskjs',
+    exts: ['.js', '.json'],
     nodemodules: false,
     ...options,
   });

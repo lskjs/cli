@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require("../package/info");
+require('../package/info');

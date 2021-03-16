@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { shell, run } = require("@lskjs/cli-utils");
+const { shell, run } = require('@lskjs/cli-utils');
 
 const main = async () => {
   const cwd = `${process.cwd()}/.storybook`;

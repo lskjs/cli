@@ -1,4 +1,4 @@
-const glob = require("glob");
+const glob = require('glob');
 
 const hasTs = (pattern) => {
   const list = glob.sync(pattern);

@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require("../package/npm-install");
+require('../package/npm-install');
