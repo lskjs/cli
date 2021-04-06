@@ -4,9 +4,13 @@
 const { shell, run } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell('rm -rf cra/src');
-  await shell('ln -s src cra/src');
+  const cwd = process.cwd();
+  await shell('rm -rf cra/src cra/public/assets');
+  // await shell('ln -s ../src cra/src');
+  await shell(`ln -s ${cwd}/src ${cwd}/cra/src`);
+  // await shell('cp -R src cra/src');
   await shell('CI=false SKIP_PREFLIGHT_CHECK=true npm run build', {
+    // await shell('CI=false npm run build', {
     cwd: 'cra',
   });
   console.log('OK - cra build');

@@ -5,6 +5,7 @@ const { run, shell, findPath } = require('@lskjs/cli-utils');
 const main = async () => {
   const cwd = process.cwd();
   await shell('rm -rf cra/src cra/public/assets');
+  // await shell('cp -R src cra/src');
   await shell(`ln -s ${cwd}/src ${cwd}/cra/src`);
   const publicAssets = findPath('public/assets');
   if (publicAssets) {
