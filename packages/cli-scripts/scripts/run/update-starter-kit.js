@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { run, shell, findPath } = require('@lskjs/cli-utils');
+const { run, shell, rsync, findPath } = require('@lskjs/cli-utils');
 
 const findExternal = (name) => findPath({ name, local: 0 });
 
@@ -8,8 +8,8 @@ const main = async () => {
     // eslint-disable-next-line max-len
     `rm -rf .all-contributorsrc .czrc.js .eslintrc-package.js .lintstagedrc.js .huskyrc.json .release-it.js .remarkrc.js Dockerfile jsconfig.json styleguide.config.js coverage`,
   );
-  await shell(`rsync -aEp --exclude CHANGELOG.md --exclude node_modules ${findExternal('files')}/ .`);
-  await shell(`rsync -aEp --ignore-existing ${findExternal('softFiles')}/ .`);
+  await rsync(`${findExternal('files')}/`, '.', { options: '-aEp --exclude CHANGELOG.md --exclude node_modules' });
+  await rsync(`${findExternal('softFiles')}/`, '.', { options: '-aEp --ignore-existing' });
   // eslint-disable-next-line no-console
   console.log(`
 ===========================================

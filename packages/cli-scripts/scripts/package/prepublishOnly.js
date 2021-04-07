@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { run, shell } = require('@lskjs/cli-utils');
+const { run, rsync } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell(`rsync -aEp --ignore-missing-args package.json package-lock.json yarn.lock release/`);
+  await rsync(['package.json', 'package-lock.json', 'yarn.lock'], 'release', { ignoreMissingFiles: true });
 };
 
 run(main);

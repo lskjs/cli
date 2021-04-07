@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { run, shell, findPath, packagePath } = require('@lskjs/cli-utils');
+const { run, rsync, findPath, packagePath } = require('@lskjs/cli-utils');
 
 const main = async () => {
   const paths = [
@@ -10,9 +10,9 @@ const main = async () => {
     .map(findPath)
     .join(' ');
 
-  await shell(`rsync -aEp ${paths} ${packagePath('cra')}`);
-  await shell(`rsync -aEp ${findPath('scripts/assets/cra/public')} ${packagePath('cra/public')}`);
-  await shell(`rsync -aEp ${findPath('scripts/assets/cra/public/index.html')} ${packagePath('cra/public/index.html')}`);
+  await rsync(paths, packagePath('cra'));
+  await rsync(findPath('scripts/assets/cra/public'), packagePath('cra/public'));
+  await rsync(findPath('scripts/assets/cra/public/index.html'), packagePath('cra/public/index.html'));
 };
 
 run(main);

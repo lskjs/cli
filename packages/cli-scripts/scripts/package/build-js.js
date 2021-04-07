@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { shell, run, hasTs, findBin } = require('@lskjs/cli-utils');
+const { shell, run, hasTs, findBin, rsync } = require('@lskjs/cli-utils');
 
 const DIST = process.env.DIST || 'build';
 const { WATCH = false } = process.env;
@@ -9,7 +9,7 @@ async function main() {
     await shell(`rm -rf ${DIST}`);
   }
   await shell(`mkdir -p ${DIST}`);
-  await shell(`rsync -aEp --ignore-missing-args package.json package-lock.json yarn.lock README.md ${DIST}/`);
+  await rsync(['package.json', 'package-lock.json', 'yarn.lock', 'README.md'], DIST, { ignoreMissingFiles: true });
   // --minified
   // const babel = "../../node_modules/@babel/cli/bin/babel.js";
   const params = `${BUILD_PARAMS} ${WATCH ? ' --watch' : ''}`;
