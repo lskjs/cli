@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.1](https://github.com/lskjs/cli/compare/v2.17.0...v2.17.1) (2021-04-07)
+
+
+### Bug Fixes
+
+* ignore not founded files ([eaad786](https://github.com/lskjs/cli/commit/eaad7862880b03a8a23eee00fc39335a2040eaac))
+* ignore not founded files ([9a56e30](https://github.com/lskjs/cli/commit/9a56e307ff9e25f5cc284f22dd8af868796f3c96))
+
+
+
+
+
 # [2.17.0](https://github.com/lskjs/cli/compare/v2.16.0...v2.17.0) (2021-04-07)
 
 
