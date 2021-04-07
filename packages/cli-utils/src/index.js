@@ -3,6 +3,7 @@ const { findPaths } = require('./findPaths');
 const { findPath } = require('./findPath');
 const { findBin } = require('./findBin');
 const { shell } = require('./shell');
+const { rsync } = require('./rsync');
 const { run } = require('./run');
 const { replaceAll } = require('./replaceAll');
 const { drawLogo } = require('./drawLogo');
@@ -33,5 +34,6 @@ module.exports = {
   run,
   replaceAll,
   shell,
+  rsync
   drawLogo,
 };
