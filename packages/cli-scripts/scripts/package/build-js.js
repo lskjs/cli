@@ -9,7 +9,7 @@ async function main() {
     await shell(`rm -rf ${DIST}`);
   }
   await shell(`mkdir -p ${DIST}`);
-  await shell(`rsync -aEp package.json package-lock.json yarn.lock README.md ${DIST}/`);
+  await shell(`rsync -aEp --ignore-missing-args package.json package-lock.json yarn.lock README.md ${DIST}/`);
   // --minified
   // const babel = "../../node_modules/@babel/cli/bin/babel.js";
   const params = `${BUILD_PARAMS} ${WATCH ? ' --watch' : ''}`;

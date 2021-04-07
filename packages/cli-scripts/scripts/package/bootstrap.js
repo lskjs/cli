@@ -6,7 +6,7 @@ const main = async () => {
   await shell('mkdir -p build');
   await shell('lsk run npm:install');
   await shell('mkdir -p node_modules');
-  await shell('rsync -aEp package.json package-lock.json yarn.lock build/');
+  await shell('rsync -aEp --ignore-missing-args package.json package-lock.json yarn.lock build/');
   if (hasCra()) {
     await shell('lsk run bootstrap:cra');
   }
