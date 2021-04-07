@@ -34,6 +34,6 @@ module.exports = {
   run,
   replaceAll,
   shell,
-  rsync
+  rsync,
   drawLogo,
 };
