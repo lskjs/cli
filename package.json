@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "DEBUG=* ./packages/cli/bin/run",
     "release": "lerna publish --conventional-commits --exact -y",
+    "release:yes": "lerna publish --conventional-commits --exact -y",
     "bootstrap": "lerna bootstrap",
     "test": "cd packages/cli-utils/tests && ./tests.sh",
     "eslint": "eslint --ext .js,.jsx .",
