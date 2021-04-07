@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/lskjs/cli/compare/v2.16.0...v2.17.0) (2021-04-07)
+
+
+### Bug Fixes
+
+* some small fixes ([301211c](https://github.com/lskjs/cli/commit/301211ca7816efea40f47425e82e8b1ec21081f3))
+
+
+### Features
+
+* change cp to rsync ([fbdb425](https://github.com/lskjs/cli/commit/fbdb425afaec51f3d7b8890634954f80885bd1a0))
+
+
+
+
+
 # [2.16.0](https://github.com/lskjs/cli/compare/v2.15.1...v2.16.0) (2021-03-16)
 
 
