@@ -2,8 +2,7 @@
 const { run, shell } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell(`rm -rf release/package.json release/package-lock.json`);
-  await shell(`cp package.json package-lock.json  release `);
+  await shell(`rsycn -aEp package.json package-lock.json yarn.lock release/`);
   await shell(`npm publish release/`);
 };
 
