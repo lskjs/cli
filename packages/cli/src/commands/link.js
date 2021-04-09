@@ -19,7 +19,7 @@ class LinkCommand extends Command {
       .filter(Boolean)
       .join(' ');
     await shell(
-      `watchexec -r -w ${from} --signal SIGTERM -- rsync -aEn --delete-after --perms --progress ${excludes} ${from}/ ${to}/`,
+      `watchexec -r -w ${from} --signal SIGTERM -- rsync -aE --delete-after --perms --progress ${excludes} ${from}/ ${to}/`,
     );
   }
 }
