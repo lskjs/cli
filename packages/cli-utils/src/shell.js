@@ -13,6 +13,7 @@ function spawn(command, args = [], options = {}) {
     name: packageName,
   });
   const {
+    silence = false,
     debug = logger.debug.bind(logger), // eslint-disable-line no-console
     log = logger.debug.bind(logger), // eslint-disable-line no-console
     error = logger.error.bind(logger), // eslint-disable-line no-console
@@ -24,27 +25,27 @@ function spawn(command, args = [], options = {}) {
 
   if (debug) {
     if (packageName && packageName[0] === '/') packageName = null;
-    debug(`${printCommand(command)}`, args.join(' '));
+    if (!silence && debug) debug(`${printCommand(command)}`, args.join(' '));
   }
   return new Promise((resolve, reject) => {
     const proc = nativeSpawn(command, args, otherOptions);
     if (proc.stdout) {
       proc.stdout.on('data', (data) => {
         const res = data.toString().trim();
-        if (log) log(res);
+        if (!silence && log) log(res);
       });
     }
     if (proc.stderr) {
       proc.stderr.on('data', (data) => {
         const res = data.toString().trim();
-        if (error) error(res);
+        if (!silence && error) error(res);
       });
     }
     proc.on('exit', (code) => {
       // if (trace) {
       // trace("<<<", command, args.join(" "));
       // }
-      if (code) fatal({ code });
+      if (!silence && code) fatal({ code });
       if (!code) return resolve(proc);
       // eslint-disable-next-line prefer-promise-reject-errors
       return reject({ proc, code });

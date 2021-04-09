@@ -1,4 +1,6 @@
 const { getPaths } = require('./getPaths');
+const { checkSoft } = require('./checkSoft');
+const { log } = require('./log');
 const { findPaths } = require('./findPaths');
 const { findPath } = require('./findPath');
 const { findBin } = require('./findBin');
@@ -36,4 +38,6 @@ module.exports = {
   shell,
   rsync,
   drawLogo,
+  checkSoft,
+  log,
 };

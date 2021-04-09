@@ -1,9 +1,12 @@
 #!/usr/bin/env node
-const { shell } = require('@lskjs/cli-utils');
+/* eslint-disable max-len */
+const { shell, checkSoft } = require('@lskjs/cli-utils');
 const { Command, flags } = require('@oclif/command');
 
 class LinkCommand extends Command {
   async run() {
+    await checkSoft(['rsync', 'watchexec']);
+
     const {
       args: { from, to },
       flags: { nodemodules, git },
@@ -15,7 +18,9 @@ class LinkCommand extends Command {
     const excludes = [!nodemodules ? '--exclude node_modules' : null, !git ? '--exclude .git' : null]
       .filter(Boolean)
       .join(' ');
-    await shell(`watchexec -r -w ${from} --signal SIGTERM -- rsync -aE --progress ${excludes} ${from}/ ${to}`);
+    await shell(
+      `watchexec -r -w ${from} --signal SIGTERM -- rsync -aEn --delete-after --perms --progress ${excludes} ${from}/ ${to}/`,
+    );
   }
 }
 
