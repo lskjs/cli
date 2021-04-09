@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.21.0](https://github.com/lskjs/cli/compare/v2.20.1...v2.21.0) (2021-04-09)
+
+
+### Features
+
+* add bootstrap command ([b72e277](https://github.com/lskjs/cli/commit/b72e277b473bc263b46fb05dd78e26f5c3aa0f60))
+
+
+
+
+
 ## [2.20.1](https://github.com/lskjs/cli/compare/v2.20.0...v2.20.1) (2021-04-09)
 
 **Note:** Version bump only for package @lskjs/cli
