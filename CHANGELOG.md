@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.19.0](https://github.com/lskjs/cli/compare/v2.18.4...v2.19.0) (2021-04-09)
+
+
+### Features
+
+* add silence to shell, add checkSoft, check watchexec while link ([2894ce0](https://github.com/lskjs/cli/commit/2894ce077f64e8812cb3d1c9e3521e57b1e50122))
+
+
+
+
+
 ## [2.18.4](https://github.com/lskjs/cli/compare/v2.18.3...v2.18.4) (2021-04-09)
 
 
