@@ -45,7 +45,7 @@ function spawn(command, args = [], options = {}) {
       // if (trace) {
       // trace("<<<", command, args.join(" "));
       // }
-      if (!silence && code) fatal({ code });
+      if (!silence && code && fatal) fatal({ code });
       if (!code) return resolve(proc);
       // eslint-disable-next-line prefer-promise-reject-errors
       return reject({ proc, code });
