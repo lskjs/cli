@@ -4,11 +4,11 @@ const { shell } = require('./shell');
 
 async function checkSoft(name) {
   if (Array.isArray(name)) return Bluebird.each(name, checkSoft);
-  return shell(`where ${name}`, { silence: true }).catch((err) => {
-    if (err.code !== 127) {
-      log.fatal(err);
-      return;
-    }
+  return shell(`which ${name}`, { silence: true }).catch((err) => {
+    // if (err.code !== 1) {
+    //   log.fatal(err);
+    //   return;
+    // }
     if (name === 'watchexec') {
       log.fatal(
         `Command "${name}" not found. 
@@ -21,7 +21,7 @@ More info: https://github.com/watchexec/watchexec
       );
       return;
     }
-    log.fatal(`Command ${name} not found`);
+    log.fatal(`Command "${name}" not found`);
   });
 }
 
