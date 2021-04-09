@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.20.0](https://github.com/lskjs/cli/compare/v2.19.2...v2.20.0) (2021-04-09)
+
+
+### Features
+
+* can add template while init ([0198fd1](https://github.com/lskjs/cli/commit/0198fd1881f20697fb1528b046d07fd234a083fb))
+
+
+
+
+
 ## [2.19.2](https://github.com/lskjs/cli/compare/v2.19.1...v2.19.2) (2021-04-09)
 
 
