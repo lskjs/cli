@@ -26,12 +26,12 @@ const main = async () => {
   await rsync(`${findExternal('files')}/`, '.', { options: '-aEp --exclude CHANGELOG.md --exclude node_modules' });
   await rsync(`${findExternal('softFiles')}/`, '.', { options: '-aEp --ignore-existing' });
   // eslint-disable-next-line no-console
-  console.log(`
-===========================================
-        All OK, now you need to do:
-npm install && npm run bootstrap && npm run update
-===========================================
-  `);
+  //   console.log(`
+  // ===========================================
+  //         All OK, now you need to do:
+  // npm install && npm run bootstrap && npm run update
+  // ===========================================
+  //   `);
 };
 
 run(main);
