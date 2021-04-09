@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.1](https://github.com/lskjs/cli/compare/v2.19.0...v2.19.1) (2021-04-09)
+
+
+### Bug Fixes
+
+* checkSoft realize ([f73f50d](https://github.com/lskjs/cli/commit/f73f50da696f36c8b26c0f19b26733df63c2fff7))
+
+
+
+
+
 # [2.19.0](https://github.com/lskjs/cli/compare/v2.18.4...v2.19.0) (2021-04-09)
 
 
