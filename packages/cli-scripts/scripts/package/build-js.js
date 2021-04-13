@@ -9,7 +9,10 @@ async function main() {
     await shell(`rm -rf ${DIST}`);
   }
   await shell(`mkdir -p ${DIST}`);
-  await rsync(['package.json', 'package-lock.json', 'yarn.lock', 'README.md'], DIST, { ignoreMissingFiles: true });
+  await rsync(['package.json', 'package-lock.json', 'yarn.lock', 'README.md'], DIST, {
+    ignoreMissingFiles: true,
+    cmd: 'cp',
+  });
   // --minified
   // const babel = "../../node_modules/@babel/cli/bin/babel.js";
   const params = `${BUILD_PARAMS} ${WATCH ? ' --watch' : ''}`;
