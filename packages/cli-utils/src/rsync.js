@@ -1,7 +1,7 @@
 const { shell } = require('./shell');
 const fs = require('fs');
 
-function rsync(from, to, { options = '-aEp', cwd, ignoreMissingFiles } = {}) {
+function rsync(from, to, { options = '-aEp', cwd, ignoreMissingFiles, cmd = 'rsync' } = {}) {
   // eslint-disable-next-line no-param-reassign
   if (!cwd) cwd = process.cwd();
   // const cwd = options.cwd || process.cwd();
@@ -19,7 +19,13 @@ function rsync(from, to, { options = '-aEp', cwd, ignoreMissingFiles } = {}) {
   const paths = items.join(' ');
   if (!paths) return null;
 
-  return shell(`rsync ${options} ${paths} ${to}`);
+  if (cmd === 'rsync') {
+    return shell(`rsync ${options} ${paths} ${to}`);
+  }
+  if (cmd === 'cp') {
+    return shell(`yes | cp -R ${paths} ${to}`);
+  }
+  throw `incorrect cmd: ${cmd}`;
 }
 
 module.exports = { rsync };
