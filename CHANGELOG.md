@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/lskjs/cli/compare/v2.21.0...v2.22.0) (2021-04-13)
+
+
+### Features
+
+* rsync with cmd cp ([8694fda](https://github.com/lskjs/cli/commit/8694fdaf034d3e7b37001ea10600f2396fb4f732))
+
+
+
+
+
 # [2.21.0](https://github.com/lskjs/cli/compare/v2.20.1...v2.21.0) (2021-04-09)
 
 
