@@ -9,5 +9,5 @@ const main = async () => {
     await shell(`npm i ${npmInstallParams}`);
   }
 };
-
+ 
 run(main);

@@ -6,7 +6,7 @@ const main = async () => {
 
   await shell(`lsk run npm:install`, { cwd });
   await shell(`rm -f packages/node_module`);
-  await shell(`ln -s node_modules ../packages/node_modules`, { cwd });
+  await shell(`ln -s ../packages/node_modules node_modules`, { cwd });
 };
 
 run(main);
