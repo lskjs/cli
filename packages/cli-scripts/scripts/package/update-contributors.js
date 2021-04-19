@@ -17,7 +17,7 @@ const main = async () => {
     await shell(`rm -rf scripts/templates/contributors.md`);
     return;
   }
-  await shell(`${findBin('all-contributors')} generate --config ${config}`)
+  await shell(`${findBin('all-contributors')} generate --config ${config}`);
 };
 
 module.exports = run(main);
