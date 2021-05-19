@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jest": "26.6.0",
     "react": "17.0.1",
     "react-app-rewired": "2.1.8",
     "react-dom": "17.0.1",
@@ -11,7 +12,9 @@
   "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-app-rewired start",
+    "dev": "npm run start",
     "build": "react-app-rewired build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
