@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/lskjs/cli/compare/v2.22.3...v2.23.0) (2021-05-19)
+
+
+### Features
+
+* new cra release ([5b35a84](https://github.com/lskjs/cli/commit/5b35a84cd68bc49be825078115c9987cfb36123e))
+
+
+
+
+
 ## [2.22.3](https://github.com/lskjs/cli/compare/v2.22.2...v2.22.3) (2021-04-19)
 
 
