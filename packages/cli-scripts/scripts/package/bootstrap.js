@@ -2,7 +2,7 @@
 const { shell, run, rsync, hasCra, isDev, isDebug } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell('rum -rf release build node_modules');
+  await shell('rm -rf release build node_modules');
   await shell('mkdir -p build');
   await shell('lsk run npm:install');
   await shell('mkdir -p node_modules');
