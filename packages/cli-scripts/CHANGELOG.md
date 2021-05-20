@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.24.0](https://github.com/lskjs/cli/compare/v2.23.1...v2.24.0) (2021-05-20)
+
+
+### Features
+
+* lerna only warn and error logs ([6de5c3c](https://github.com/lskjs/cli/commit/6de5c3c169129dc09395ac7c5856ecb44dc05437))
+
+
+
+
+
 ## [2.23.1](https://github.com/lskjs/cli/compare/v2.23.0...v2.23.1) (2021-05-19)
 
 
