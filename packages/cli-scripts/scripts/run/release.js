@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const { run, shell, findBin } = require('@lskjs/cli-utils');
+const { run, shell, lerna } = require('@lskjs/cli-utils');
 
 const main = async ({ argv } = {}) => {
-  const args = argv.join(' ');
-  if (process.env.BUMP) {
+  let args = argv.join(' ');
+  if (process.env.BUMP || argv.force) {
     args += ' --force-publish=*';
   }
   await shell(`DIST=release lsk run build`);
-  await shell(`${findBin('lerna')} publish --exact --contents release ${args}`);
+  await lerna(`publish --exact --contents release ${args}`);
   await shell('lsk run release:after');
 };
 
