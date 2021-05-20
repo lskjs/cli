@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.2](https://github.com/lskjs/cli/compare/v2.24.1...v2.24.2) (2021-05-20)
+
+**Note:** Version bump only for package @lskjs/cli-scripts
+
+
+
+
+
 ## [2.24.1](https://github.com/lskjs/cli/compare/v2.24.0...v2.24.1) (2021-05-20)
 
 
