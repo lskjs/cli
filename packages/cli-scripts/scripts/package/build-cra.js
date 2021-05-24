@@ -15,7 +15,7 @@ const main = async () => {
   });
   console.log('OK - cra build');
   await shell('mkdir -p public');
-  await rsync(`cra/build/*', 'public/`);
+  await rsync('cra/build/*', 'public/');
   await shell(`lsk run build:cra:extract`);
 };
 
