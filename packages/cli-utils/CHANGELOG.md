@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.5](https://github.com/lskjs/cli/compare/v2.24.4...v2.24.5) (2021-05-24)
+
+
+### Bug Fixes
+
+* check rsync exists ([9c412ac](https://github.com/lskjs/cli/commit/9c412acaa644b18ac2877d2f14f3d327b45cc271))
+
+
+
+
+
 ## [2.24.2](https://github.com/lskjs/cli/compare/v2.24.1...v2.24.2) (2021-05-20)
 
 
