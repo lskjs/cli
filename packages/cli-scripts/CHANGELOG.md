@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.3](https://github.com/lskjs/cli/compare/v2.24.2...v2.24.3) (2021-05-24)
+
+
+### Bug Fixes
+
+* fatal cra build bug ([e765971](https://github.com/lskjs/cli/commit/e7659718a30ab742ba9fa0558224ad04b970ac3e))
+
+
+
+
+
 ## [2.24.2](https://github.com/lskjs/cli/compare/v2.24.1...v2.24.2) (2021-05-20)
 
 **Note:** Version bump only for package @lskjs/cli-scripts
