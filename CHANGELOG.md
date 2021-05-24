@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.4](https://github.com/lskjs/cli/compare/v2.24.3...v2.24.4) (2021-05-24)
+
+
+### Bug Fixes
+
+* update config overrided for production build ([89822fb](https://github.com/lskjs/cli/commit/89822fb015022e691ed7724f37281fb0c3b75311))
+
+
+
+
+
 ## [2.24.3](https://github.com/lskjs/cli/compare/v2.24.2...v2.24.3) (2021-05-24)
 
 
