@@ -11,9 +11,9 @@
   },
   "proxy": "http://localhost:8080",
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
     "dev": "npm run start",
-    "build": "react-app-rewired build",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"

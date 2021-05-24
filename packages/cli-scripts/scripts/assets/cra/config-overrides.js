@@ -2,10 +2,12 @@
 // eslint-disable-next-line import/no-unresolved
 const eslintConfig = require('../../../.eslintrc.js');
 const path = require('path');
+const fs = require('fs');
 
 module.exports = function override(config) {
   const appPath = path.resolve(__dirname, '../');
   const srcPath = `${appPath}/src`;
+  // fs.writeFileSync('./config.json', JSON.stringify(config, null, 2));
 
   // Change entry point
   config.entry = `${srcPath}/index.js`;
@@ -42,13 +44,21 @@ module.exports = function override(config) {
   };
 
   // ModuleNotFoundPlugin
-  config.plugins[2].appPath = appPath;
+  config.plugins.forEach((plugin) => {
+    if (!plugin.appPath) return;
+    plugin.appPath = appPath;
+  });
 
   // WatchMissingNodeModulesPlugin
-  config.plugins[7].nodeModulesPath = `${appPath}/node_modules`;
+  config.plugins.forEach((plugin) => {
+    if (!plugin.nodeModulesPath) return;
+    plugin.nodeModulesPath = `${appPath}/node_modules`;
+  });
 
   // ESLintWebpackPlugin
-  config.plugins[10].baseConfig = eslintConfig;
+  config.plugins.forEach((plugin) => {
+    if (plugin.key !== 'ESLintWebpackPlugin') plugin.baseConfig = eslintConfig;
+  });
 
   // ModuleScopePlugin
   config.resolve.plugins[1].appSrcs[0] = srcPath;
