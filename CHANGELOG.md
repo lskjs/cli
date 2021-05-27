@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.2](https://github.com/lskjs/cli/compare/v2.25.1...v2.25.2) (2021-05-27)
+
+
+### Bug Fixes
+
+* lerna use global scope variable ([d89c299](https://github.com/lskjs/cli/commit/d89c2990f4af343bd2d16bedf2bdd6a0dfe9b5ca))
+
+
+
+
+
 ## [2.25.1](https://github.com/lskjs/cli/compare/v2.25.0...v2.25.1) (2021-05-27)
 
 
