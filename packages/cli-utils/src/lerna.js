@@ -2,8 +2,17 @@ const { shell } = require('./shell');
 const { findBin } = require('./findBin');
 
 const lerna = (...args) => {
-  const scope = process.env.SCOPE || process.env.PACKAGES || null;
-  shell([findBin('lerna'), '--loglevel warn', scope && `--scope ${scope}`, ...args].filter(Boolean).join(' '));
+  const scopes = (process.env.SCOPE || process.env.PACKAGES || '').split(' ').filter(Boolean);
+  const shellArgs = [
+    // asd
+    findBin('lerna'),
+    '--loglevel warn',
+    ...scopes.map((scope) => `--scope ${scope}`),
+    ...args,
+  ]
+    .filter(Boolean)
+    .join(' ');
+  shell(shellArgs);
 };
 
 module.exports = {
