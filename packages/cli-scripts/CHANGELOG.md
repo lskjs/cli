@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.1](https://github.com/lskjs/cli/compare/v2.27.0...v2.27.1) (2021-07-29)
+
+
+### Bug Fixes
+
+* typescript typings ([77c8b75](https://github.com/lskjs/cli/commit/77c8b757acafca53142bfbd8ea0bdc22dc5414f1))
+
+
+
+
+
 # [2.27.0](https://github.com/lskjs/cli/compare/v2.26.0...v2.27.0) (2021-07-29)
 
 **Note:** Version bump only for package @lskjs/cli-scripts
