@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const { run, lerna } = require('@lskjs/cli-utils');
+const { run, lernaParallel } = require('@lskjs/cli-utils');
 
 // @TODO: extract env file
 const main = async () => {
-  await lerna(`exec --parallel --no-prefix -- npm run dev`);
+  await lernaParallel(`exec --no-bail --no-prefix -- npm run dev`);
 };
 
 run(main);

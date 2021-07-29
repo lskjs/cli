@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { run, lerna } = require('@lskjs/cli-utils');
+const { run, lernaParallel } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await lerna(`exec --parallel -- lsk run build`);
+  await lernaParallel(`exec --no-bail -- lsk run build`);
 };
 
 run(main);
