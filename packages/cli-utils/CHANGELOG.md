@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.27.0](https://github.com/lskjs/cli/compare/v2.26.0...v2.27.0) (2021-07-29)
+
+
+### Features
+
+* add lerna concurrency ([fee6e94](https://github.com/lskjs/cli/commit/fee6e947d6f6422f1e214ecbe30c10afe159537d))
+
+
+
+
+
 # [2.26.0](https://github.com/lskjs/cli/compare/v2.25.2...v2.26.0) (2021-07-29)
 
 
