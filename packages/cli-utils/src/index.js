@@ -19,6 +19,7 @@ const { isDebug } = require('./isDebug');
 const { hasTs } = require('./hasTs');
 const { mergePackageJson } = require('./mergePackageJson');
 const { lerna } = require('./lerna');
+const { lernaParallel } = require('./lernaParallel');
 
 module.exports = {
   mergePackageJson,
@@ -30,6 +31,7 @@ module.exports = {
   findPath,
   findBin,
   lerna,
+  lernaParallel,
   rootPath,
   packagePath,
   getLskConfig,
