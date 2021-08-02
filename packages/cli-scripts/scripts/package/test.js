@@ -2,7 +2,8 @@
 const { run, shell } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await shell(`jest --passWithNoTests`);
+  const argv = process.argv.slice(2);
+  await shell(`jest --passWithNoTests ${argv.join(' ')}`);
 };
 
 run(main);
