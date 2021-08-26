@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.29.0](https://github.com/lskjs/cli/compare/v2.28.0...v2.29.0) (2021-08-26)
+
+
+### Features
+
+* lint ts/js, log level, node warning, fix bugs ([1698857](https://github.com/lskjs/cli/commit/16988574ace1e0eb23cd832f8fe53ba8394f8d80))
+
+
+
+
+
 # [2.27.0](https://github.com/lskjs/cli/compare/v2.26.0...v2.27.0) (2021-07-29)
 
 
