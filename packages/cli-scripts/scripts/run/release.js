@@ -7,7 +7,7 @@ const main = async ({ argv } = {}) => {
   if (process.env.BUMP || argv.force) {
     args += ' --force-publish=*';
   }
-  await shell(`DIST=release lsk run build`);
+  await shell(`DIST=release lsk run build -- --since`);
   await lerna(`publish --exact --contents release ${args}`);
   await shell('lsk run release:after');
 };

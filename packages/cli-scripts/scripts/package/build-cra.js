@@ -4,7 +4,7 @@
 const { shell, run, rsync } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  const cwd = process.cwd();
+  // const cwd = process.cwd();
   await shell('rm -rf cra/public/assets');
   // await shell('ln -s ../src cra/src');
   // await shell(`ln -s ${cwd}/src ${cwd}/cra/src`);
