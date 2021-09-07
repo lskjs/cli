@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.31.0](https://github.com/lskjs/cli/compare/v2.30.1...v2.31.0) (2021-09-07)
+
+
+### Features
+
+* fix hasTsHere error and migrate to utils ([cb690d8](https://github.com/lskjs/cli/commit/cb690d8edd5975d318dfd553a838a744c8adbfd7))
+
+
+
+
+
 # [2.30.0](https://github.com/lskjs/cli/compare/v2.29.0...v2.30.0) (2021-09-07)
 
 

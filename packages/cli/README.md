@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.30.1 darwin-x64 node-v16.8.0
+@lskjs/cli/2.31.0 darwin-x64 node-v16.8.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -64,7 +64,7 @@ USAGE
   $ lsk bootstrap
 ```
 
-_See code: [src/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/bootstrap.js)_
+_See code: [src/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/bootstrap.js)_
 
 ## `lsk help [COMMAND]`
 
@@ -90,7 +90,7 @@ USAGE
   $ lsk info
 ```
 
-_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/info.js)_
+_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/info.js)_
 
 ## `lsk init PROJECTNAME`
 
@@ -109,7 +109,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/init.js)_
+_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/init.js)_
 
 ## `lsk link FROM TO`
 
@@ -128,7 +128,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/link.js)_
+_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/link.js)_
 
 ## `lsk run SCRIPT`
 
@@ -140,7 +140,7 @@ OPTIONS
   -e, --explain=explain  explain of path
 ```
 
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/run.js)_
 
 ## `lsk update`
 
@@ -149,7 +149,7 @@ USAGE
   $ lsk update
 ```
 
-_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.30.1/src/commands/update.js)_
+_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.31.0/src/commands/update.js)_
 <!-- commandsstop -->
 
 
