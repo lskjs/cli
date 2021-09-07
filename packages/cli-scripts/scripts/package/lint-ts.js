@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const Err = require('@lskjs/err');
-const { hasTsHere } = require('../utils');
-const { shell, run, findBin, log } = require('@lskjs/cli-utils');
+const { shell, run, findBin, log, hasTsHere } = require('@lskjs/cli-utils');
 
 const DIST = process.env.DIST || 'build';
 async function main() {

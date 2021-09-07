@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const { hasTs } = require('@lskjs/cli-utils');
+const { hasTs } = require('./hasTs');
 
-const hasTsHere = async () => {
+const hasTsHere = () => {
   const tsGrepPath = `${process.cwd()}/src/**/*.ts`;
   const isHasTs = hasTs(tsGrepPath) || hasTs(`${tsGrepPath}x`);
   return isHasTs;

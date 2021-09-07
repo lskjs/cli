@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-const { shell, hasCra, run } = require('@lskjs/cli-utils');
-const { hasTsHere } = require('../utils');
+const { shell, hasCra, hasTsHere, run } = require('@lskjs/cli-utils');
 
 const main = async () => {
   if (hasTsHere()) {

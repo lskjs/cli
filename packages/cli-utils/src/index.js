@@ -14,6 +14,7 @@ const { getNpmGlobal } = require('./getNpmGlobal');
 const { rootPath } = require('./rootPath');
 const { packagePath } = require('./packagePath');
 const { hasCra } = require('./hasCra');
+const { hasTsHere } = require('./hasTsHere');
 const { isDev } = require('./isDev');
 const { isDebug } = require('./isDebug');
 const { hasTs } = require('./hasTs');
@@ -24,6 +25,7 @@ const { lernaParallel } = require('./lernaParallel');
 module.exports = {
   mergePackageJson,
   hasTs,
+  hasTsHere,
   isDev,
   isDebug,
   getPaths,
