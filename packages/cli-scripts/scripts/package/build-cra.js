@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const { shell, run, rsync } = require('@lskjs/cli-utils');
+const { shell, run, rsync, log } = require('@lskjs/cli-utils');
 
 const main = async () => {
   // const cwd = process.cwd();
@@ -13,7 +13,7 @@ const main = async () => {
     // await shell('CI=false npm run build', {
     cwd: 'cra',
   });
-  console.log('OK - cra build');
+  log.info('OK - cra build');
   await shell('mkdir -p public');
   await rsync('cra/build/*', 'public/');
   await shell(`lsk run build:cra:extract`);

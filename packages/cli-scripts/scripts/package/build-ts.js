@@ -9,6 +9,7 @@ async function main() {
     log.error('!hasTsHere –– TS not found');
     throw new Err('!hasTsHere');
   }
+  await shell(`lsk run build:js`);
   // NOTE: Why? https://github.com/babel/babel/issues/9668#issuecomment-602221154
   await shell(`${findBin('tsc')} --project tsconfig.types.json --outDir ${DIST}`);
 }

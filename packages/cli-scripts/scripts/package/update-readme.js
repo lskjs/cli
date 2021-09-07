@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 /* eslint-disable import/no-dynamic-require */
 const fs = require('fs');
-const { run, findPath, shell } = require('@lskjs/cli-utils');
+const { run, findPath } = require('@lskjs/cli-utils');
 const runTemplate = require('remark-template/run');
 const getBaseFile = require('remark-template/getFile');
 
 const getFile = (name, ...params) => {
-  // console.log({name})
   const path = findPath(name);
-  // console.log({path})
   if (!path) return '';
   const res = getBaseFile(path, ...params);
   return res;

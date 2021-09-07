@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-shadow */
 /* eslint-disable import/no-dynamic-require */
-/* eslint-disable no-console */
-const { run } = require('@lskjs/cli-utils');
+const { run, log } = require('@lskjs/cli-utils');
 
 const main = async () => {
   const dir = process.cwd();
@@ -17,11 +16,11 @@ const main = async () => {
         !(entrypoint.startsWith(`${prefix}main.`) || entrypoint.startsWith(`${prefix}runtime-main.`)),
     );
     if (vendorEntrypoints.length === 0) {
-      console.error(`WARNING no vendorEntrypoints ${ext} for manifest`, manifest);
+      log.error(`WARNING no vendorEntrypoints ${ext} for manifest`, manifest);
       return null;
     }
     if (vendorEntrypoints.length >= 2) {
-      console.log('vendorEntrypoints', vendorEntrypoints);
+      log.error('vendorEntrypoints', vendorEntrypoints);
       throw `MULTIPLE vendorEntrypoints${ext}`;
     }
     const path = vendorEntrypoints[0];
@@ -36,9 +35,9 @@ const main = async () => {
     const vendorNameJs = `static/js/${getVendorName(manifest, 'js')}.js`;
     manifest.files['vendor.js'] = manifest.files[vendorNameJs];
   }
-  console.log(`LSK MODIFFY ASSET MANIFEST: ${assetManifestPath}`);
-  console.log(`files["vendor.css"] => ${manifest.files['vendor.css']}`);
-  console.log(`files["vendor.js"] => ${manifest.files['vendor.js']}`);
+  log.debug(`LSK MODIFFY ASSET MANIFEST: ${assetManifestPath}`);
+  log.debug(`files["vendor.css"] => ${manifest.files['vendor.css']}`);
+  log.debug(`files["vendor.js"] => ${manifest.files['vendor.js']}`);
   require('fs').writeFileSync(assetManifestPath, JSON.stringify(manifest));
 };
 

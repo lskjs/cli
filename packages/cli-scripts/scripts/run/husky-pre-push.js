@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { run, shell, findBin } = require('@lskjs/cli-utils');
+const { run, shell, log } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  console.log('husky-pre-push');
+  log.trace('husky-pre-push');
   await shell(`ls`);
 };
 
