@@ -7,4 +7,4 @@ const hasTsHere = async () => {
   return isHasTs;
 };
 
-module.exports = hasTsHere;
+module.exports = { hasTsHere };
