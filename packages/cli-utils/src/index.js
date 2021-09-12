@@ -1,49 +1,57 @@
-const { getPaths } = require('./getPaths');
 const { checkSoft } = require('./checkSoft');
-const { log } = require('./log');
-const { findPaths } = require('./findPaths');
-const { findPath } = require('./findPath');
-const { findBin } = require('./findBin');
-const { shell } = require('./shell');
-const { rsync } = require('./rsync');
-const { run } = require('./run');
-const { replaceAll } = require('./replaceAll');
 const { drawLogo } = require('./drawLogo');
+const { findBin } = require('./findBin');
+const { findPath } = require('./findPath');
+const { findPaths } = require('./findPaths');
 const { getLskConfig } = require('./getLskConfig');
 const { getNpmGlobal } = require('./getNpmGlobal');
-const { rootPath } = require('./rootPath');
-const { packagePath } = require('./packagePath');
+const { getPaths } = require('./getPaths');
+const { getShortPath } = require('./getShortPath');
 const { hasCra } = require('./hasCra');
-const { hasTsHere } = require('./hasTsHere');
-const { isDev } = require('./isDev');
-const { isDebug } = require('./isDebug');
 const { hasTs } = require('./hasTs');
-const { mergePackageJson } = require('./mergePackageJson');
+const { hasTsHere } = require('./hasTsHere');
+const { isDebug } = require('./isDebug');
+const { isDev } = require('./isDev');
 const { lerna } = require('./lerna');
 const { lernaParallel } = require('./lernaParallel');
+const { copy } = require('./copy');
+const { link } = require('./link');
+const { linkAll } = require('./linkAll');
+const { log } = require('./log');
+const { mergePackageJson } = require('./mergePackageJson');
+const { packagePath } = require('./packagePath');
+const { replaceAll } = require('./replaceAll');
+const { rootPath } = require('./rootPath');
+const { rsync } = require('./rsync');
+const { run } = require('./run');
+const { shell } = require('./shell');
 
 module.exports = {
-  mergePackageJson,
-  hasTs,
-  hasTsHere,
-  isDev,
-  isDebug,
-  getPaths,
-  findPaths,
-  findPath,
+  checkSoft,
+  drawLogo,
   findBin,
-  lerna,
-  lernaParallel,
-  rootPath,
-  packagePath,
+  findPath,
+  findPaths,
   getLskConfig,
   getNpmGlobal,
+  getPaths,
+  getShortPath,
   hasCra,
-  run,
-  replaceAll,
-  shell,
-  rsync,
-  drawLogo,
-  checkSoft,
+  hasTs,
+  hasTsHere,
+  isDebug,
+  isDev,
+  lerna,
+  lernaParallel,
+  copy,
+  link,
+  linkAll,
   log,
+  mergePackageJson,
+  packagePath,
+  replaceAll,
+  rootPath,
+  rsync,
+  run,
+  shell,
 };

@@ -1,24 +1,30 @@
 #!/usr/bin/env node
 /* eslint-disable max-len */
-const { checkSoft, link } = require('@lskjs/cli-utils');
+const { checkSoft, copy } = require('@lskjs/cli-utils');
 const { Command, flags } = require('@oclif/command');
 
-class LinkCommand extends Command {
+class CopyCommand extends Command {
   async run() {
     const {
       args: { from, to },
       flags: { nodemodules, git },
-    } = this.parse(LinkCommand);
+    } = this.parse(CopyCommand);
     await checkSoft(['rsync']);
-    await link({ from, to, nodemodules, git });
+    await copy({
+      from,
+      to,
+      nodemodules,
+      git,
+    });
   }
 }
 
-LinkCommand.description = `Recursive watching and incremental copy dirs with rsync
+CopyCommand.description = `Recursive incremental copy dirs with rsync
 ...
+
 `;
 
-LinkCommand.args = [
+CopyCommand.args = [
   {
     name: 'from',
     required: true,
@@ -29,7 +35,7 @@ LinkCommand.args = [
   },
 ];
 
-LinkCommand.flags = {
+CopyCommand.flags = {
   nodemodules: flags.string({
     char: 'n',
     description: 'include node_modules folder',
@@ -37,4 +43,4 @@ LinkCommand.flags = {
   git: flags.string({ char: 'g', description: 'include .git folder' }),
 };
 
-module.exports = LinkCommand;
+module.exports = CopyCommand;

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const { hasTs } = require('./hasTs');
 
 const hasTsHere = () => {
