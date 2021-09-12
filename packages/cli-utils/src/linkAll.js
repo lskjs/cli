@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { link } = require('./link');
 const { getShortPath } = require('./getShortPath');
+const { log } = require('./log');
 
 const getLinks = (links) => {
   const dirs = [];
@@ -24,7 +25,7 @@ const linkAll = async (config, options = {}) => {
   const str = links
     .map(([from, to]) => `${getShortPath(from)}${getLinkRightPad(from, maxLength)} => ${getShortPath(to)}`)
     .join('\n');
-  getShortPath.info(`
+  log.info(`
 ==================== LINKING ======================
 
 ${str}
