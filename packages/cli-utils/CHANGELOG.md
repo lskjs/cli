@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.33.0](https://github.com/lskjs/cli/compare/v2.32.1...v2.33.0) (2021-09-12)
+
+
+### Features
+
+* rename links to linkall ([25a1bcf](https://github.com/lskjs/cli/commit/25a1bcfb0ea05022508c96c786144277ea64d580))
+
+
+
+
+
 ## [2.32.1](https://github.com/lskjs/cli/compare/v2.32.0...v2.32.1) (2021-09-12)
 
 
