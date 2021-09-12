@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { link } = require('./link');
-const { getShortLink } = require('./shell');
+const { getShortPath } = require('./getShortPath');
 
 const getLinks = (links) => {
   const dirs = [];
@@ -22,9 +22,9 @@ const linkAll = async (config, options = {}) => {
   const links = getLinks(config);
   const maxLength = Math.max(...links.map(([from]) => from.length));
   const str = links
-    .map(([from, to]) => `${getShortLink(from)}${getLinkRightPad(from, maxLength)} => ${getShortLink(to)}`)
+    .map(([from, to]) => `${getShortPath(from)}${getLinkRightPad(from, maxLength)} => ${getShortPath(to)}`)
     .join('\n');
-  getShortLink.info(`
+  getShortPath.info(`
 ==================== LINKING ======================
 
 ${str}
