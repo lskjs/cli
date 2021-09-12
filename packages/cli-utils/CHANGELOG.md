@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.1](https://github.com/lskjs/cli/compare/v2.32.0...v2.32.1) (2021-09-12)
+
+
+### Bug Fixes
+
+* linkAll error ([f3e59a8](https://github.com/lskjs/cli/commit/f3e59a80dcbf6ef2203615b283f3475a164c3491))
+
+
+
+
+
 # [2.32.0](https://github.com/lskjs/cli/compare/v2.31.0...v2.32.0) (2021-09-12)
 
 
