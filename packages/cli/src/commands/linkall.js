@@ -3,12 +3,12 @@
 const { checkSoft, linkAll } = require('@lskjs/cli-utils');
 const { Command, flags } = require('@oclif/command');
 
-class LinksCommand extends Command {
+class LinkallCommand extends Command {
   async run() {
     const {
       args: { config: configPath },
       flags: { nodemodules, git },
-    } = this.parse(LinksCommand);
+    } = this.parse(LinkallCommand);
     await checkSoft(['rsync']);
     // eslint-disable-next-line import/no-dynamic-require
     const config = require(`${process.cwd()}/${configPath}`);
@@ -16,18 +16,18 @@ class LinksCommand extends Command {
   }
 }
 
-LinksCommand.description = `Recursive watching and incremental copy dirs with rsync
+LinkallCommand.description = `Recursive watching and incremental copy dirs with rsync
 ...
 `;
 
-LinksCommand.args = [
+LinkallCommand.args = [
   {
     name: 'config',
     required: true,
   },
 ];
 
-LinksCommand.flags = {
+LinkallCommand.flags = {
   nodemodules: flags.string({
     char: 'n',
     description: 'include node_modules folder',
@@ -35,4 +35,4 @@ LinksCommand.flags = {
   git: flags.string({ char: 'g', description: 'include .git folder' }),
 };
 
-module.exports = LinksCommand;
+module.exports = LinkallCommand;
