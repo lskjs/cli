@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.34.0](https://github.com/lskjs/cli/compare/v2.33.0...v2.34.0) (2021-09-23)
+
+
+### Features
+
+* add lsk log ([96b58eb](https://github.com/lskjs/cli/commit/96b58eb9ef6634b099da5942f88cde1a953ef465))
+
+
+
+
+
 # [2.33.0](https://github.com/lskjs/cli/compare/v2.32.1...v2.33.0) (2021-09-12)
 
 

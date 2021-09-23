@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.33.0 darwin-x64 node-v16.8.0
+@lskjs/cli/2.34.0 darwin-x64 node-v16.8.0
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -49,42 +49,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`lsk bootstrap`](#lsk-bootstrap)
-* [`lsk copy FROM TO`](#lsk-copy-from-to)
 * [`lsk help [COMMAND]`](#lsk-help-command)
-* [`lsk info`](#lsk-info)
-* [`lsk init PROJECTNAME`](#lsk-init-projectname)
-* [`lsk link FROM TO`](#lsk-link-from-to)
-* [`lsk linkall CONFIG`](#lsk-linkall-config)
-* [`lsk run SCRIPT`](#lsk-run-script)
-* [`lsk update`](#lsk-update)
-
-## `lsk bootstrap`
-
-```
-USAGE
-  $ lsk bootstrap
-```
-
-_See code: [src/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/bootstrap.js)_
-
-## `lsk copy FROM TO`
-
-Recursive incremental copy dirs with rsync
-
-```
-USAGE
-  $ lsk copy FROM TO
-
-OPTIONS
-  -g, --git=git                  include .git folder
-  -n, --nodemodules=nodemodules  include node_modules folder
-
-DESCRIPTION
-  ...
-```
-
-_See code: [src/commands/copy.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/copy.js)_
 
 ## `lsk help [COMMAND]`
 
@@ -101,92 +66,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
-
-## `lsk info`
-
-```
-USAGE
-  $ lsk info
-```
-
-_See code: [src/commands/info.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/info.js)_
-
-## `lsk init PROJECTNAME`
-
-Init new LSK.js project
-
-```
-USAGE
-  $ lsk init PROJECTNAME
-
-OPTIONS
-  -t, --template=template  An example to bootstrap the app with. You can use an example name from the LSK.js repo or a
-                           GitHub URL. The URL can use any branch and/or subdirectory.
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/init.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/init.js)_
-
-## `lsk link FROM TO`
-
-Recursive watching and incremental copy dirs with rsync
-
-```
-USAGE
-  $ lsk link FROM TO
-
-OPTIONS
-  -g, --git=git                  include .git folder
-  -n, --nodemodules=nodemodules  include node_modules folder
-
-DESCRIPTION
-  ...
-```
-
-_See code: [src/commands/link.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/link.js)_
-
-## `lsk linkall CONFIG`
-
-Recursive watching and incremental copy dirs with rsync
-
-```
-USAGE
-  $ lsk linkall CONFIG
-
-OPTIONS
-  -g, --git=git                  include .git folder
-  -n, --nodemodules=nodemodules  include node_modules folder
-
-DESCRIPTION
-  ...
-```
-
-_See code: [src/commands/linkall.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/linkall.js)_
-
-## `lsk run SCRIPT`
-
-```
-USAGE
-  $ lsk run SCRIPT
-
-OPTIONS
-  -e, --explain=explain  explain of path
-```
-
-_See code: [src/commands/run.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/run.js)_
-
-## `lsk update`
-
-```
-USAGE
-  $ lsk update
-```
-
-_See code: [src/commands/update.js](https://github.com/lskjs/cli/blob/v2.33.0/src/commands/update.js)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 <!-- commandsstop -->
 
 
