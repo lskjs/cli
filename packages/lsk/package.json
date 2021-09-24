@@ -1,6 +1,6 @@
 {
   "name": "lsk",
-  "version": "2.34.0",
+  "version": "2.35.2",
   "description": "LSK.js CLI (Command Line Interface) is the easiest way to create and manage LSK.js project",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
