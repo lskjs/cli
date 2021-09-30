@@ -12,7 +12,7 @@ const main = async () => {
   const config = getLskConfig();
   const ncu = (config && config.ncu) || {};
   const packages = ncu.packages || '/^@(lskjs)/.*$/';
-  const target = ncu.packages || 'latest';
+  const target = ncu.target || 'latest';
   try {
     const params = [`--dep=${ncu.dep || 'prod,dev,peer,optional'}`, target ? `--target ${target}` : ''].join(' ');
     await shell(`${findBin('ncu')} -u -l error -e 2 ${params} "${packages}"`, { fatal: 0, error: 0 });
