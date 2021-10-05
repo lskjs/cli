@@ -3,13 +3,17 @@ const fs = require('fs');
 const { shell, findPath, getPaths, isDebug, replaceAll } = require('@lskjs/cli-utils');
 
 class RunCommand extends Command {
+  static strict = false;
   async run() {
+    // console.log('this.argv', this.argv)
     let barePos = this.argv.indexOf('--');
+    const isRealBare = barePos === -1;
     if (barePos === -1) {
-      barePos = this.argv.length;
+      barePos = 0;
     }
-    const argv = this.argv.slice(0, barePos);
+    const argv = this.argv.slice(0, isRealBare ? 1 : barePos);
     const bareArgv = this.argv.slice(barePos + 1);
+    // console.log({argv,bareArgv })
 
     const {
       args: { script: npmScriptName },
@@ -69,11 +73,13 @@ RunCommand.args = [
     name: 'script',
     required: true,
   },
+  ...Array.from(Array(10).keys()).map((a) => ({
+    name: `arg${a}`,
+  })),
 ];
 
 RunCommand.flags = {
-  explain: flags.string({
-    char: 'e',
+  explainPath: flags.string({
     description: 'explain of path',
   }),
 };

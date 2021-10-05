@@ -2,7 +2,8 @@
 const { run, lerna } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await lerna(`exec -- lsk run test`);
+  const argv = process.argv.slice(2);
+  await lerna(`exec -- lsk run test -- ${argv.join(' ')}`);
 };
 
 run(main);
