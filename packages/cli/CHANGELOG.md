@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.36.0](https://github.com/lskjs/cli/compare/v2.35.3...v2.36.0) (2021-10-05)
+
+
+### Features
+
+* improve run -- bare args ([91f9897](https://github.com/lskjs/cli/commit/91f9897263153e9830e1a2421ac0583660e4a0dc))
+
+
+
+
+
 ## [2.35.3](https://github.com/lskjs/cli/compare/v2.35.2...v2.35.3) (2021-09-30)
 
 **Note:** Version bump only for package @lskjs/cli
