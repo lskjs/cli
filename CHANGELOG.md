@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.37.0](https://github.com/lskjs/cli/compare/v2.36.1...v2.37.0) (2021-10-18)
+
+
+### Features
+
+* migrate log2 => log ([ecffe9e](https://github.com/lskjs/cli/commit/ecffe9e304923326b336d260f4ec0fe9f2cbd67a))
+
+
+
+
+
 ## [2.36.1](https://github.com/lskjs/cli/compare/v2.36.0...v2.36.1) (2021-10-18)
 
 **Note:** Version bump only for package lskjs-cli
