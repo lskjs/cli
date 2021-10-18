@@ -6,7 +6,7 @@ const { stdin } = process;
 
 class LogCommand extends Command {
   async run() {
-    require('@lskjs/log2/cli');
+    require('@lskjs/log/cli');
   }
 }
 

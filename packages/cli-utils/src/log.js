@@ -1,8 +1,12 @@
-const { Logger } = require('@lskjs/log2');
+const { Logger } = require('@lskjs/log');
 
-const log = new Logger({
-  ns: 'cli',
-  level: process.env.LOG_LEVEL || 'warn',
-});
+const createLogger = (props = {}) =>
+  new Logger({
+    ns: 'cli',
+    level: process.env.LOG_LEVEL || 'warn',
+    ...props,
+  });
 
-module.exports = { log };
+const log = createLogger();
+
+module.exports = { log, createLogger };

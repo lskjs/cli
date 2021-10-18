@@ -1,5 +1,5 @@
 const { spawn: nativeSpawn } = require('child_process');
-const { Logger } = require('@lskjs/log2');
+const { createLogger } = require('./log');
 
 // https://github.com/shelljs/shelljs/issues/86
 // https://docs.google.com/document/d/1UFm10TONaNWok3aEPzUP_OjZ6lEvwlYqyJBUcugLfso/edit#heading=h.u8gil4dopy47
@@ -8,8 +8,7 @@ function spawn(command, args = [], options = {}) {
   const cwd = process.cwd();
   let [packageName] = cwd.split('/packages/').reverse();
   if (packageName[0] === '/') packageName = null;
-  const logger = new Logger({
-    ns: 'cli',
+  const logger = createLogger({
     name: packageName,
   });
   const {
