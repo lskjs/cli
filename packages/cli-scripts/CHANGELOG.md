@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.37.1](https://github.com/lskjs/cli/compare/v2.37.0...v2.37.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* npm start replacement ([234b891](https://github.com/lskjs/cli/commit/234b891d3e15f4d0e64f72857c2a0cdc364ec747))
+
+
+
+
+
 # [2.37.0](https://github.com/lskjs/cli/compare/v2.36.1...v2.37.0) (2021-10-18)
 
 
