@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.39.0](https://github.com/lskjs/cli/compare/v2.38.0...v2.39.0) (2021-12-13)
+
+**Note:** Version bump only for package lsk
+
+
+
+
+
 # [2.38.0](https://github.com/lskjs/cli/compare/v2.37.1...v2.38.0) (2021-12-13)
 
 **Note:** Version bump only for package lsk
