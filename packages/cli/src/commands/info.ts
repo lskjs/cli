@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-ignore
 import { drawLogo } from '@lskjs/cli-utils';
 import { Command } from '@oclif/command';
 

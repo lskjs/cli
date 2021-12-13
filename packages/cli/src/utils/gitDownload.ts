@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 /* eslint-disable max-len */
-/* eslint-disable no-console */
-import { drawLogo, shell } from '@lskjs/cli-utils';
-import { isDebug } from '@lskjs/cli-utils';
+// @ts-ignore
+import { shell } from '@lskjs/cli-utils';
 import Err from '@lskjs/err';
-import { Command, flags } from '@oclif/command';
 
-import { printInfo } from './printInfo.js';
-
+// @ts-ignore
 export async function gitDownload(uri: string, { dest, depth = 1, rm = true } = {}) {
   if (!uri) throw new Err('!uri');
   if (!dest) throw new Err('!dest');

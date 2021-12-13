@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.38.0 darwin-x64 node-v17.0.1
+@lskjs/cli/2.39.0 darwin-x64 node-v17.0.1
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -49,7 +49,39 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`lsk bootstrap`](#lsk-bootstrap)
+* [`lsk copy FROM TO`](#lsk-copy-from-to)
 * [`lsk help [COMMAND]`](#lsk-help-command)
+* [`lsk info`](#lsk-info)
+* [`lsk init PROJECTNAME`](#lsk-init-projectname)
+* [`lsk link FROM TO`](#lsk-link-from-to)
+* [`lsk linkall CONFIG`](#lsk-linkall-config)
+* [`lsk log`](#lsk-log)
+* [`lsk run SCRIPT [ARG0] [ARG1] [ARG2] [ARG3] [ARG4] [ARG5] [ARG6] [ARG7] [ARG8] [ARG9]`](#lsk-run-script-arg0-arg1-arg2-arg3-arg4-arg5-arg6-arg7-arg8-arg9)
+* [`lsk update`](#lsk-update)
+
+## `lsk bootstrap`
+
+```
+USAGE
+  $ lsk bootstrap
+```
+
+## `lsk copy FROM TO`
+
+Recursive incremental copy dirs with rsync
+
+```
+USAGE
+  $ lsk copy FROM TO
+
+OPTIONS
+  -g, --git=git                  include .git folder
+  -n, --nodemodules=nodemodules  include node_modules folder
+
+DESCRIPTION
+  ...
+```
 
 ## `lsk help [COMMAND]`
 
@@ -67,6 +99,86 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.17/src/commands/help.ts)_
+
+## `lsk info`
+
+```
+USAGE
+  $ lsk info
+```
+
+## `lsk init PROJECTNAME`
+
+Init new LSK.js project
+
+```
+USAGE
+  $ lsk init PROJECTNAME
+
+OPTIONS
+  -t, --template=template  An example to bootstrap the app with. You can use an example name from the LSK.js repo or a
+                           GitHub URL. The URL can use any branch and/or subdirectory.
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+## `lsk link FROM TO`
+
+Recursive watching and incremental copy dirs with rsync
+
+```
+USAGE
+  $ lsk link FROM TO
+
+OPTIONS
+  -g, --git=git                  include .git folder
+  -n, --nodemodules=nodemodules  include node_modules folder
+
+DESCRIPTION
+  ...
+```
+
+## `lsk linkall CONFIG`
+
+Recursive watching and incremental copy dirs with rsync
+
+```
+USAGE
+  $ lsk linkall CONFIG
+
+OPTIONS
+  -g, --git=git                  include .git folder
+  -n, --nodemodules=nodemodules  include node_modules folder
+
+DESCRIPTION
+  ...
+```
+
+## `lsk log`
+
+```
+USAGE
+  $ lsk log
+```
+
+## `lsk run SCRIPT [ARG0] [ARG1] [ARG2] [ARG3] [ARG4] [ARG5] [ARG6] [ARG7] [ARG8] [ARG9]`
+
+```
+USAGE
+  $ lsk run SCRIPT [ARG0] [ARG1] [ARG2] [ARG3] [ARG4] [ARG5] [ARG6] [ARG7] [ARG8] [ARG9]
+
+OPTIONS
+  --explainPath=explainPath  explain of path
+```
+
+## `lsk update`
+
+```
+USAGE
+  $ lsk update
+```
 <!-- commandsstop -->
 
 

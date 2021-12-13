@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable max-len */
-/* eslint-disable no-console */
+// @ts-ignore
 import { drawLogo, isDebug, shell } from '@lskjs/cli-utils';
 import { Command, flags } from '@oclif/command';
 

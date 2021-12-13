@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 /* eslint-disable max-len */
+// @ts-ignore
 import { checkSoft, copy } from '@lskjs/cli-utils';
 import { Command, flags } from '@oclif/command';
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// @ts-ignore
 import { shell } from '@lskjs/cli-utils';
 import { Command } from '@oclif/command';
 

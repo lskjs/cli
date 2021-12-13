@@ -21,6 +21,7 @@
     "@babel/runtime": "7.16.3",
     "@lskjs/cli-scripts": "2.38.0",
     "@lskjs/cli-utils": "2.38.0",
+    "@lskjs/err": "2.43.0",
     "@lskjs/log": "2.52.0",
     "@oclif/command": "1.8.13",
     "@oclif/config": "1.18.2",
@@ -54,7 +55,7 @@
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "lint:js": "eslint . --ext .js --fix && prettier --write --plugin-search-dir=.",
     "version": "oclif-dev readme && git add README.md && rm -f ../../README.md && cp README.md ../.."

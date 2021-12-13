@@ -1,3 +1,4 @@
+// @ts-ignore
 import { findPath, getPaths, isDebug, replaceAll, shell } from '@lskjs/cli-utils';
 import { Command, flags } from '@oclif/command';
 import { existsSync } from 'fs';
@@ -56,7 +57,7 @@ export class RunCommand extends Command {
     await shell(cmd, {
       log: this.log.bind(this),
       error: this.log.bind(this),
-      printCommand: (command) => {
+      printCommand: (command: string) => {
         if (isDebug()) return command;
         let str = command;
         str = replaceAll(str, `${cwd}/`, '');

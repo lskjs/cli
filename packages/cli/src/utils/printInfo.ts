@@ -1,3 +1,4 @@
+// @ts-ignore
 export function printInfo({ config, log } = {}) {
   log('Version: ', config.version);
   log('System:  ', config.userAgent);
