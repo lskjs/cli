@@ -1,5 +1,6 @@
 const { shell } = require('./shell');
 const fs = require('fs');
+const Err = require('@lskjs/err');
 
 function rsync(from, to, { options = '-aEp', cwd, ignoreMissingFiles, cmd } = {}) {
   if (!cmd) {
@@ -29,7 +30,7 @@ function rsync(from, to, { options = '-aEp', cwd, ignoreMissingFiles, cmd } = {}
   if (cmd === 'cp') {
     return shell(`yes | cp -R ${paths} ${to}`);
   }
-  throw `incorrect cmd: ${cmd}`;
+  throw new Err('incorrect cmd', { cmd });
 }
 
 module.exports = { rsync };
