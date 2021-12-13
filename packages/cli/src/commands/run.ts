@@ -1,8 +1,8 @@
-const { Command, flags } = require('@oclif/command');
-const fs = require('fs');
-const { shell, findPath, getPaths, isDebug, replaceAll } = require('@lskjs/cli-utils');
+import { findPath, getPaths, isDebug, replaceAll, shell } from '@lskjs/cli-utils';
+import { Command, flags } from '@oclif/command';
+import { existsSync } from 'fs';
 
-class RunCommand extends Command {
+export class RunCommand extends Command {
   static strict = false;
   async run() {
     // console.log('this.argv', this.argv)
@@ -23,12 +23,12 @@ class RunCommand extends Command {
 
     const cwd = process.cwd();
 
-    const isRoot = fs.existsSync(`${cwd}/lerna.json`);
+    const isRoot = existsSync(`${cwd}/lerna.json`);
     const isPackage =
       !isRoot &&
-      (fs.existsSync(`${cwd}/../lerna.json`) ||
-        fs.existsSync(`${cwd}/../../lerna.json`) ||
-        fs.existsSync(`${cwd}/../../../lerna.json`));
+      (existsSync(`${cwd}/../lerna.json`) ||
+        existsSync(`${cwd}/../../lerna.json`) ||
+        existsSync(`${cwd}/../../../lerna.json`));
     // const isPackage = !isLernaRoot
     const dirname = isPackage ? 'package' : 'run';
 
@@ -84,4 +84,4 @@ RunCommand.flags = {
   }),
 };
 
-module.exports = RunCommand;
+export default RunCommand;

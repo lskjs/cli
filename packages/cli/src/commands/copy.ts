@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable max-len */
-const { checkSoft, copy } = require('@lskjs/cli-utils');
-const { Command, flags } = require('@oclif/command');
+import { checkSoft, copy } from '@lskjs/cli-utils';
+import { Command, flags } from '@oclif/command';
 
-class CopyCommand extends Command {
+export class CopyCommand extends Command {
   async run() {
     const {
       args: { from, to },
@@ -43,4 +43,4 @@ CopyCommand.flags = {
   git: flags.string({ char: 'g', description: 'include .git folder' }),
 };
 
-module.exports = CopyCommand;
+export default CopyCommand;

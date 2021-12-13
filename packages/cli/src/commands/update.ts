@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { Command } = require('@oclif/command');
-const { shell } = require('@lskjs/cli-utils');
+import { shell } from '@lskjs/cli-utils';
+import { Command } from '@oclif/command';
 
-class UpdateCommand extends Command {
+export class UpdateCommand extends Command {
   async run() {
     await shell('lsk run update:starter-kit');
     await shell('lsk run npm:install');
@@ -11,4 +11,4 @@ class UpdateCommand extends Command {
   }
 }
 
-module.exports = UpdateCommand;
+export default UpdateCommand;

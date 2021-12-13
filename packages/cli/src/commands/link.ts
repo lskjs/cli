@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable max-len */
-const { checkSoft, link } = require('@lskjs/cli-utils');
-const { Command, flags } = require('@oclif/command');
+import { checkSoft, link } from '@lskjs/cli-utils';
+import { Command, flags } from '@oclif/command';
 
-class LinkCommand extends Command {
+export class LinkCommand extends Command {
   async run() {
     const {
       args: { from, to },
@@ -37,4 +37,4 @@ LinkCommand.flags = {
   git: flags.string({ char: 'g', description: 'include .git folder' }),
 };
 
-module.exports = LinkCommand;
+export default LinkCommand;
