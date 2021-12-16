@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.41.0](https://github.com/lskjs/cli/compare/v2.40.2...v2.41.0) (2021-12-16)
+
+
+### Features
+
+* add lib in commands ([f71e82e](https://github.com/lskjs/cli/commit/f71e82e5cf5309e05839b7cf152ba8eced87e0d1))
+
+
+
+
+
 ## [2.40.2](https://github.com/lskjs/cli/compare/v2.40.1...v2.40.2) (2021-12-16)
 
 
