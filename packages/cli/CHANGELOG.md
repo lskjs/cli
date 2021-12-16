@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.40.1](https://github.com/lskjs/cli/compare/v2.40.0...v2.40.1) (2021-12-16)
+
+
+### Bug Fixes
+
+* downgrade globby ([0d1e897](https://github.com/lskjs/cli/commit/0d1e8972dab429926c30d0bf854abff43ac8d958))
+
+
+
+
+
 # [2.40.0](https://github.com/lskjs/cli/compare/v2.39.1...v2.40.0) (2021-12-16)
 
 
