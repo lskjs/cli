@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli",
-  "version": "2.39.1",
+  "version": "2.40.0",
   "description": "LSK.js CLI (Command Line Interface) is the easiest way to create and manage LSK.js project",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@babel/runtime": "7.16.5",
-    "@lskjs/cli-scripts": "2.38.0",
-    "@lskjs/cli-utils": "2.38.0",
+    "@lskjs/cli-scripts": "2.40.0",
+    "@lskjs/cli-utils": "2.40.0",
     "@lskjs/err": "2.43.0",
     "@lskjs/log": "2.56.0",
     "@oclif/command": "1.8.15",
