@@ -44,9 +44,9 @@
     "/src",
     "/utils.js"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "oclif": {
-    "commands": "./src/commands",
+    "commands": "./lib/commands",
     "bin": "lsk",
     "plugins": [
       "@oclif/plugin-help"
