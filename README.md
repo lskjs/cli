@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.40.0 darwin-x64 node-v17.0.1
+@lskjs/cli/2.40.1 darwin-x64 node-v17.0.1
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
