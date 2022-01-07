@@ -2,10 +2,11 @@
   "author": "Igor Suvorov @isuvorov",
   "bugs": "https://github.com/lskjs/cli/issues",
   "devDependencies": {
-    "@lskjs/cli-utils": "2.43.0",
+    "@lskjs/cli-utils": "2.44.0",
     "@lskjs/eslint-config": "2.10.0",
     "eslint": "8.6.0",
     "lerna": "4.0.0",
+    "npm-check-updates": "12.1.0",
     "typescript": "4.5.4"
   },
   "license": "MIT",
