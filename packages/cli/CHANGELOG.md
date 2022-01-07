@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.44.1](https://github.com/lskjs/cli/compare/v2.44.0...v2.44.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* update logger bugs ([24e3468](https://github.com/lskjs/cli/commit/24e34688f70b05bd722e89a189d2ee5fdf54e3a9))
+
+
+
+
+
 # [2.44.0](https://github.com/lskjs/cli/compare/v2.43.0...v2.44.0) (2022-01-07)
 
 
