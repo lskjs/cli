@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli-utils",
-  "version": "2.42.0",
+  "version": "2.43.0",
   "description": "LSK.js CLI-utils – some utils functions for LSK.js – CLI projects  ",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
