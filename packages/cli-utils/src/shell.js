@@ -40,14 +40,27 @@ function spawn(command, args = [], options = {}) {
         if (!silence && error) error(res);
       });
     }
+    proc.on('error', (err) => {
+      if (!silence) {
+        if (err && err.code === 'ENOENT') {
+          fatal(`NO SUCH DIRECTORY: ${cwd}`, err);
+          return;
+        }
+        if (!silence && fatal) fatal(err);
+      }
+      reject(err);
+    });
     proc.on('exit', (code) => {
       // if (trace) {
       // trace("<<<", command, args.join(" "));
       // }
       if (!silence && code && fatal) fatal({ code });
-      if (!code) return resolve(proc);
+      if (!code) {
+        resolve(proc);
+        return;
+      }
       // eslint-disable-next-line prefer-promise-reject-errors
-      return reject({ proc, code });
+      reject({ proc, code });
     });
   });
 }

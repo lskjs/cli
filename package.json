@@ -2,6 +2,7 @@
   "author": "Igor Suvorov @isuvorov",
   "bugs": "https://github.com/lskjs/cli/issues",
   "devDependencies": {
+    "@lskjs/cli-utils": "2.42.0",
     "@lskjs/eslint-config": "2.10.0",
     "eslint": "8.6.0",
     "lerna": "4.0.0",
