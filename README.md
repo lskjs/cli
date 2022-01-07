@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.40.2 darwin-x64 node-v17.0.1
+@lskjs/cli/2.41.0 darwin-x64 node-v17.0.1
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -67,6 +67,8 @@ USAGE
   $ lsk bootstrap
 ```
 
+_See code: [lib/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/bootstrap.js)_
+
 ## `lsk copy FROM TO`
 
 Recursive incremental copy dirs with rsync
@@ -82,6 +84,8 @@ OPTIONS
 DESCRIPTION
   ...
 ```
+
+_See code: [lib/commands/copy.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/copy.js)_
 
 ## `lsk help [COMMAND]`
 
@@ -107,6 +111,8 @@ USAGE
   $ lsk info
 ```
 
+_See code: [lib/commands/info.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/info.js)_
+
 ## `lsk init PROJECTNAME`
 
 Init new LSK.js project
@@ -124,6 +130,8 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
+_See code: [lib/commands/init.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/init.js)_
+
 ## `lsk link FROM TO`
 
 Recursive watching and incremental copy dirs with rsync
@@ -139,6 +147,8 @@ OPTIONS
 DESCRIPTION
   ...
 ```
+
+_See code: [lib/commands/link.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/link.js)_
 
 ## `lsk linkall CONFIG`
 
@@ -156,12 +166,16 @@ DESCRIPTION
   ...
 ```
 
+_See code: [lib/commands/linkall.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/linkall.js)_
+
 ## `lsk log`
 
 ```
 USAGE
   $ lsk log
 ```
+
+_See code: [lib/commands/log.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/log.js)_
 
 ## `lsk run SCRIPT [ARG0] [ARG1] [ARG2] [ARG3] [ARG4] [ARG5] [ARG6] [ARG7] [ARG8] [ARG9]`
 
@@ -173,12 +187,16 @@ OPTIONS
   --explainPath=explainPath  explain of path
 ```
 
+_See code: [lib/commands/run.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/run.js)_
+
 ## `lsk update`
 
 ```
 USAGE
   $ lsk update
 ```
+
+_See code: [lib/commands/update.js](https://github.com/lskjs/cli/blob/v2.41.0/lib/commands/update.js)_
 <!-- commandsstop -->
 
 
