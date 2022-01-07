@@ -22,7 +22,7 @@
     "@lskjs/cli-scripts": "2.44.1",
     "@lskjs/cli-utils": "2.44.1",
     "@lskjs/err": "2.57.0",
-    "@lskjs/log": "2.64.1",
+    "@lskjs/log": "2.65.0",
     "@oclif/command": "1.8.16",
     "@oclif/config": "1.18.2",
     "@oclif/plugin-help": "5.1.10",
