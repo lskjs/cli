@@ -6,7 +6,7 @@ const main = async () => {
   if (config && config.storybook) {
     await shell('lsk run bootstrap:storybook');
   }
-  await lernaParallel(`exec --no-bail --no-prefix -- lsk run bootstrap`);
+  await lernaParallel(`exec --no-prefix -- lsk run bootstrap`);
 };
 
 run(main);

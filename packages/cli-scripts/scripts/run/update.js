@@ -4,7 +4,7 @@ const { run, shell, lernaParallel } = require('@lskjs/cli-utils');
 const main = async () => {
   await shell(`lsk run update:contributors`);
   await shell(`lsk run update:readme`);
-  await lernaParallel(`exec --no-bail -- lsk run update`);
+  await lernaParallel(`exec -- lsk run update`);
 };
 
 run(main);

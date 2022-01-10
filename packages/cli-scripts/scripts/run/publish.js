@@ -2,7 +2,7 @@
 const { run, lernaParallel } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  await lernaParallel(`exec --no-bail -- lsk run publish`);
+  await lernaParallel(`exec -- lsk run publish`);
 };
 
 run(main);
