@@ -14,9 +14,9 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@commitlint/cli": "16.0.1",
+    "@commitlint/cli": "16.0.2",
     "@lskjs/cli-utils": "2.45.0",
-    "@lskjs/err": "2.57.0",
+    "@lskjs/err": "2.65.1",
     "all-contributors-cli": "^6.20.0",
     "concurrently": "7.0.0",
     "nodemon": "2.0.15",

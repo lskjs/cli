@@ -15,9 +15,9 @@
   "repository": "lskjs/cli",
   "dependencies": {
     "@babel/runtime": "7.16.7",
-    "@lskjs/err": "2.57.0",
-    "@lskjs/log": "2.65.0",
-    "@lskjs/utils": "2.63.0",
+    "@lskjs/err": "2.65.1",
+    "@lskjs/log": "2.67.0",
+    "@lskjs/utils": "2.65.1",
     "axios": "0.24.0",
     "bluebird": "3.7.2",
     "glob": "7.2.0",
