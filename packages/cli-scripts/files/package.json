@@ -23,25 +23,25 @@
     "test:watch": "lsk run test:watch"
   },
   "dependencies": {
-    "@babel/cli": "7.16.8",
-    "@babel/core": "7.16.7",
-    "@lskjs/babel-preset": "2.8.0",
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.5",
+    "@lskjs/babel-preset": "2.10.0",
     "@lskjs/cli": "2.46.0",
-    "babel-jest": "27.4.6",
+    "babel-jest": "27.5.1",
     "babel-loader": "8.2.3",
     "lerna": "4.0.0",
-    "typescript": "4.5.4",
-    "webpack": "5.66.0",
-    "webpack-dev-server": "4.7.3"
+    "typescript": "4.6.2",
+    "webpack": "5.70.0",
+    "webpack-dev-server": "4.7.4"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "16.0.0",
+    "@commitlint/config-conventional": "16.2.1",
     "@lskjs/eslint-config": "2.10.0",
     "@lskjs/utils": "2.65.1",
     "babel-eslint": "10.1.0",
-    "eslint": "8.7.0",
+    "eslint": "8.10.0",
     "husky": "7.0.4",
-    "jest": "27.4.7",
+    "jest": "27.5.1",
     "prettier": "2.5.1"
   }
 }

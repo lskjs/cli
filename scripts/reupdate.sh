@@ -18,8 +18,5 @@ cd ../../../packages/cli-scripts/files && \
 rm -rf package-lock.json && \
 rm -rf node_modules && \
 npm i && \
-cd  ../../../packages/cli-scripts/files && \
-rm -rf package-lock.json && \
-rm -rf node_modules && \
 npm i && \
 echo "OK"
