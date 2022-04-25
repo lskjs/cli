@@ -40,7 +40,7 @@ $ npm install -g @lskjs/cli
 $ lsk COMMAND
 running command...
 $ lsk (-v|--version|version)
-@lskjs/cli/2.46.0 darwin-x64 node-v17.0.1
+@lskjs/cli/2.47.0 darwin-x64 node-v17.3.1
 $ lsk --help [COMMAND]
 USAGE
   $ lsk COMMAND
@@ -67,7 +67,7 @@ USAGE
   $ lsk bootstrap
 ```
 
-_See code: [lib/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/bootstrap.js)_
+_See code: [lib/commands/bootstrap.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/bootstrap.js)_
 
 ## `lsk copy FROM TO`
 
@@ -85,24 +85,24 @@ DESCRIPTION
   ...
 ```
 
-_See code: [lib/commands/copy.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/copy.js)_
+_See code: [lib/commands/copy.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/copy.js)_
 
 ## `lsk help [COMMAND]`
 
-Display help for lsk.
+display help for lsk
 
 ```
 USAGE
   $ lsk help [COMMAND]
 
 ARGUMENTS
-  COMMAND  Command to show help for.
+  COMMAND  command to show help for
 
 OPTIONS
-  -n, --nested-commands  Include all nested commands in the output.
+  --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.18/src/commands/help.ts)_
 
 ## `lsk info`
 
@@ -111,7 +111,7 @@ USAGE
   $ lsk info
 ```
 
-_See code: [lib/commands/info.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/info.js)_
+_See code: [lib/commands/info.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/info.js)_
 
 ## `lsk init PROJECTNAME`
 
@@ -130,7 +130,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [lib/commands/init.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/init.js)_
+_See code: [lib/commands/init.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/init.js)_
 
 ## `lsk link FROM TO`
 
@@ -148,7 +148,7 @@ DESCRIPTION
   ...
 ```
 
-_See code: [lib/commands/link.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/link.js)_
+_See code: [lib/commands/link.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/link.js)_
 
 ## `lsk linkall CONFIG`
 
@@ -166,7 +166,7 @@ DESCRIPTION
   ...
 ```
 
-_See code: [lib/commands/linkall.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/linkall.js)_
+_See code: [lib/commands/linkall.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/linkall.js)_
 
 ## `lsk log`
 
@@ -175,7 +175,7 @@ USAGE
   $ lsk log
 ```
 
-_See code: [lib/commands/log.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/log.js)_
+_See code: [lib/commands/log.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/log.js)_
 
 ## `lsk run SCRIPT [ARG0] [ARG1] [ARG2] [ARG3] [ARG4] [ARG5] [ARG6] [ARG7] [ARG8] [ARG9]`
 
@@ -187,7 +187,7 @@ OPTIONS
   --explainPath=explainPath  explain of path
 ```
 
-_See code: [lib/commands/run.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/run.js)_
+_See code: [lib/commands/run.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/run.js)_
 
 ## `lsk update`
 
@@ -196,7 +196,7 @@ USAGE
   $ lsk update
 ```
 
-_See code: [lib/commands/update.js](https://github.com/lskjs/cli/blob/v2.46.0/lib/commands/update.js)_
+_See code: [lib/commands/update.js](https://github.com/lskjs/cli/blob/v2.47.0/lib/commands/update.js)_
 <!-- commandsstop -->
 
 

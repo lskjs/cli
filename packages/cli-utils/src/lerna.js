@@ -12,7 +12,7 @@ const lerna = (...args) => {
   ]
     .filter(Boolean)
     .join(' ');
-  shell(shellArgs);
+  return shell(shellArgs);
 };
 
 module.exports = {
