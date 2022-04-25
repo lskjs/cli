@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.48.0](https://github.com/lskjs/cli/compare/v2.47.0...v2.48.0) (2022-04-25)
+
+
+### Features
+
+* throw error while lerna calling ([400ec88](https://github.com/lskjs/cli/commit/400ec886586d31cbbe8538cd9898cd4ac70eec6c))
+
+
+
+
+
 # [2.47.0](https://github.com/lskjs/cli/compare/v2.46.0...v2.47.0) (2022-03-07)
 
 
