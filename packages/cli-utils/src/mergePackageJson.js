@@ -2,8 +2,8 @@
 /* eslint-disable import/no-dynamic-require */
 const pickBy = require('lodash/pickBy');
 const isPlainObject = require('lodash/isPlainObject');
-const omit = require('lodash/omit');
-const { omitNull, isNotNull } = require('@lskjs/utils/omitNull');
+const { omitNull } = require('@lskjs/utils/omitNull');
+const { isNotNull } = require('@lskjs/utils/isNotNull');
 const { log } = require('./log');
 const sortPackageJson = require('sort-package-json');
 

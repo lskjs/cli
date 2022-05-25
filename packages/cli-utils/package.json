@@ -14,17 +14,17 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@babel/runtime": "7.17.2",
+    "@babel/runtime": "7.18.2",
     "@lskjs/err": "2.65.1",
     "@lskjs/log": "2.69.1",
-    "@lskjs/utils": "2.65.1",
-    "axios": "0.26.0",
+    "@lskjs/utils": "2.72.0",
+    "axios": "0.27.2",
     "bluebird": "3.7.2",
     "glob": "7.2.0",
     "kleur": "4.1.4",
     "lodash": "4.17.21",
     "rsync": "0.6.1",
-    "sort-package-json": "1.54.0"
+    "sort-package-json": "1.57.0"
   },
   "main": "src/index.js",
   "scripts": {}
