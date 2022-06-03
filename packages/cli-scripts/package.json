@@ -14,13 +14,13 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@commitlint/cli": "17.0.1",
+    "@commitlint/cli": "17.0.2",
     "@lskjs/cli-utils": "2.48.1",
     "@lskjs/err": "2.65.1",
     "all-contributors-cli": "^6.20.0",
     "concurrently": "7.2.1",
     "nodemon": "2.0.16",
-    "npm-check-updates": "13.0.3",
+    "npm-check-updates": "13.0.4",
     "remark-template": "1.6.0"
   }
 }
