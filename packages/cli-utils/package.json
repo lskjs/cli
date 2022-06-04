@@ -14,9 +14,9 @@
   "homepage": "https://github.com/lskjs/cli",
   "repository": "lskjs/cli",
   "dependencies": {
-    "@babel/runtime": "7.18.2",
+    "@babel/runtime": "7.18.3",
     "@lskjs/err": "2.65.1",
-    "@lskjs/log": "2.69.1",
+    "@lskjs/log": "2.73.0",
     "@lskjs/utils": "2.72.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
