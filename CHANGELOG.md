@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.1](https://github.com/lskjs/cli/compare/v2.51.0...v2.51.1) (2022-06-10)
+
+
+### Bug Fixes
+
+* find jest ([2fe78d2](https://github.com/lskjs/cli/commit/2fe78d27120b9e18e17ed667dd548f9eb5d8659f))
+
+
+
+
+
 # [2.51.0](https://github.com/lskjs/cli/compare/v2.50.0...v2.51.0) (2022-06-10)
 
 
