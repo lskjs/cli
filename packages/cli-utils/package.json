@@ -16,7 +16,7 @@
   "dependencies": {
     "@babel/runtime": "7.18.3",
     "@lskjs/err": "2.65.1",
-    "@lskjs/log": "2.75.1",
+    "@lskjs/log": "2.76.0",
     "@lskjs/utils": "2.72.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
