@@ -32,5 +32,8 @@
     "test": "cd packages/cli-utils/tests && ./tests.sh",
     "eslint": "eslint --ext .js,.jsx .",
     "eslint:fix": "npm run eslint -- --fix"
+  },
+  "dependencies": {
+    "tslib": "^2.4.1"
   }
 }
