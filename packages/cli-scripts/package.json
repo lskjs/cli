@@ -1,6 +1,6 @@
 {
   "name": "@lskjs/cli-scripts",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "LSK.js CLI-scripts – some scripts for LSK.js – CLI projects",
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "keywords": [
@@ -15,7 +15,7 @@
   "repository": "lskjs/cli",
   "dependencies": {
     "@commitlint/cli": "17.0.2",
-    "@lskjs/cli-utils": "^3.0.0-alpha.1",
+    "@lskjs/cli-utils": "^3.0.0-alpha.2",
     "@lskjs/err": "2.65.1",
     "all-contributors-cli": "^6.20.0",
     "concurrently": "7.2.1",

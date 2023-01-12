@@ -8,7 +8,6 @@
     "test": "           pnpm -r                      test",
     "test:packages": "  pnpm --filter './packages/*' test",
     "test:watch": "     pnpm -r                      test:watch",
-    "version": "        lerna version",
     "release": "lerna publish",
     "release:yes": "lerna publish"
   },

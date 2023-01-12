@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.2](https://github.com/lskjs/cli/compare/v2.52.0...v3.0.0-alpha.2) (2023-01-12)
+
+
+### Features
+
+* improve order of package json ([d2e9ca3](https://github.com/lskjs/cli/commit/d2e9ca3fb070e95a13db2f8052d39f1be23dbc9c))
+* new api and new features ([734181e](https://github.com/lskjs/cli/commit/734181eb140d46da3e7c82e44c486e3a50e7818a))
+
+
+
+
+
 # [3.0.0-alpha.1](https://github.com/lskjs/cli/compare/v2.52.0...v3.0.0-alpha.1) (2023-01-12)
 
 
