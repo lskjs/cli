@@ -1,14 +1,18 @@
 {
-  "author": "Igor Suvorov @isuvorov",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
   "bugs": "https://github.com/lskjs/cli/issues",
   "devDependencies": {
-    "@lskjs/cli-utils": "2.48.1",
-    "@lskjs/eslint-config": "2.10.0",
+    "@lskjs/cli-utils": "2.52.0",
+    "@lskjs/eslint-config": "2.14.0",
     "eslint": "8.17.0",
     "lerna": "5.1.1",
-    "npm-check-updates": "13.1.1",
+    "npm-check-updates": "16.6.2",
     "typescript": "4.7.3"
   },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "license": "MIT",
   "scripts": {
     "dev": "DEBUG=* ./packages/cli/bin/run",

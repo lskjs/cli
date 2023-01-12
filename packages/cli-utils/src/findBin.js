@@ -1,4 +1,4 @@
-const { findPath } = require('./findPath');
+const { findPath } = require('./findPaths');
 
 const findBin = (command) => {
   if (command === 'babel') {

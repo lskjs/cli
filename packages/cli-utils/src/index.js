@@ -1,8 +1,7 @@
 const { checkSoft } = require('./checkSoft');
 const { drawLogo } = require('./drawLogo');
 const { findBin } = require('./findBin');
-const { findPath } = require('./findPath');
-const { findPaths } = require('./findPaths');
+const { findPaths, findPath } = require('./findPaths');
 const { getLskConfig } = require('./getLskConfig');
 const { getNpmGlobal } = require('./getNpmGlobal');
 const { getPaths } = require('./getPaths');
@@ -20,6 +19,7 @@ const { linkAll } = require('./linkAll');
 const { log } = require('./log');
 const { mergePackageJson } = require('./mergePackageJson');
 const { packagePath } = require('./packagePath');
+const { pathexec } = require('./pathexec');
 const { replaceAll } = require('./replaceAll');
 const { rootPath } = require('./rootPath');
 const { rsync } = require('./rsync');
@@ -54,4 +54,5 @@ module.exports = {
   rsync,
   run,
   shell,
+  pathexec,
 };

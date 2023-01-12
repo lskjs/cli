@@ -21,6 +21,7 @@
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "glob": "7.2.0",
+    "global-prefix": "^3.0.0",
     "kleur": "4.1.4",
     "lodash": "4.17.21",
     "rsync": "0.6.1",

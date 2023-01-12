@@ -1,16 +1,21 @@
 {
-  "version": "2.52.0",
+  "version": "3.0.0-alpha.0",
   "packages": [
     "packages/*",
     "packages/cli-scripts/files"
   ],
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
   "command": {
     "publish": {
+      "exact": true,
+      "conventionalCommits": true,
+      "conventionalPrerelease": true,
       "ignoreChanges": [
         "ignored-file",
         "*.md"
       ],
-      "message": "chore(release): publish %s"
+      "message": "chore(release): 🎉 publish v%s"
     }
   }
 }

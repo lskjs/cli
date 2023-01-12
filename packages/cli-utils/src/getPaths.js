@@ -8,8 +8,10 @@ const getPaths = (params = {}) => {
   let { exts } = params;
   const { cwd = process.cwd(), dirs = 4, local = true, nodemodules = true, name = '' } = params;
 
+  // console.time('[getNpmGlobal]');
   const globalNodemodules = [getNpmGlobal(), `/usr/local/lib`].filter(Boolean); // TODO: npm root -g
-  const nodemodulesSuffix = '/node_modules/@lskjs/cli-scripts';
+  // console.timeEnd('[getNpmGlobal]');
+  const nodemodulesPostfix = '/node_modules/@lskjs/cli-scripts';
 
   if (!exts) exts = [''];
   const paths = [];
@@ -18,7 +20,7 @@ const getPaths = (params = {}) => {
       const dir = `${cwd}/${'../'.repeat(deep)}`;
       paths.push(...exts.map((ext) => path.resolve(`${dir}/${name}${ext}`)));
       if (nodemodules) {
-        paths.push(...exts.map((ext) => path.resolve(`${dir}/${nodemodulesSuffix}/${name}${ext}`)));
+        paths.push(...exts.map((ext) => path.resolve(`${dir}/${nodemodulesPostfix}/${name}${ext}`)));
       }
     });
   }
@@ -27,17 +29,17 @@ const getPaths = (params = {}) => {
       ...exts.map((ext) => path.resolve(`${process.env.HOME}/projects/lskjs-cli/packages/cli-scripts/${name}${ext}`)),
     );
     globalNodemodules.forEach((dir) => {
-      paths.push(...exts.map((ext) => path.resolve(`${dir}${nodemodulesSuffix}/${name}${ext}`)));
+      paths.push(...exts.map((ext) => path.resolve(`${dir}${nodemodulesPostfix}/${name}${ext}`)));
     });
     globalNodemodules.forEach((dir) => {
       paths.push(
-        ...exts.map((ext) => path.resolve(`${dir}/node_modules/@lskjs/cli/${nodemodulesSuffix}/${name}${ext}`)),
+        ...exts.map((ext) => path.resolve(`${dir}/node_modules/@lskjs/cli/${nodemodulesPostfix}/${name}${ext}`)),
       );
     });
     globalNodemodules.forEach((dir) => {
       paths.push(
         ...exts.map((ext) =>
-          path.resolve(`${dir}/node_modules/lsk/node_modules/@lskjs/cli/${nodemodulesSuffix}/${name}${ext}`),
+          path.resolve(`${dir}/node_modules/lsk/node_modules/@lskjs/cli/${nodemodulesPostfix}/${name}${ext}`),
         ),
       );
     });

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable array-callback-return */
-const { findPath } = require('./findPath');
+const { findPath } = require('./findPaths');
 
 const getLskConfig = (options = {}) => {
   const path = findPath({
