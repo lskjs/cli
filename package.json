@@ -5,12 +5,12 @@
     "clean": "          pnpm -r                      clean",
     "dev": "            pnpm -r                      dev",
     "lint:fix": "       eslint --fix",
-    "release": "        pnpm clean && pnpm build && pnpm test && lerna publish",
-    "release:ci": "     echo publish",
     "test": "           pnpm -r                      test",
     "test:packages": "  pnpm --filter './packages/*' test",
     "test:watch": "     pnpm -r                      test:watch",
-    "version": "        lerna version"
+    "version": "        lerna version",
+    "release": "lerna publish",
+    "release:yes": "lerna publish"
   },
   "devDependencies": {
     "@lskjs/cli-utils": "2.52.0",
