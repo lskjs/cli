@@ -1,24 +1,36 @@
 {
-  "author": "Igor Suvorov <hi@isuvorov.com>",
-  "bugs": "https://github.com/lskjs/cli/issues",
+  "scripts": {
+    "build": "          pnpm -r                      build",
+    "build:packages": " pnpm --filter './packages/*' build",
+    "clean": "          pnpm -r                      clean",
+    "dev": "            pnpm -r                      dev",
+    "lint:fix": "       eslint --fix",
+    "release": "        pnpm clean && pnpm build && pnpm test && lerna publish",
+    "release:ci": "     echo publish",
+    "test": "           pnpm -r                      test",
+    "test:packages": "  pnpm --filter './packages/*' test",
+    "test:watch": "     pnpm -r                      test:watch",
+    "version": "        lerna version"
+  },
   "devDependencies": {
     "@lskjs/cli-utils": "2.52.0",
-    "@lskjs/eslint-config": "2.14.0",
-    "eslint": "8.17.0",
-    "lerna": "5.1.1",
+    "@lskjs/eslint-config": "2.17.0",
+    "eslint": "8.31.0",
+    "lerna": "6.4.1",
     "npm-check-updates": "16.6.2",
-    "typescript": "4.7.3"
+    "typescript": "4.9.4"
   },
+  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "bugs": "https://github.com/lskjs/cli/issues",
+  "license": "MIT",
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "license": "MIT",
-  "scripts": {
+  "__scripts": {
     "dev": "DEBUG=* ./packages/cli/bin/run",
-    "release": "lerna publish --conventional-commits --exact -y",
-    "release:yes": "lerna publish --conventional-commits --exact -y",
-    "bootstrap": "lerna bootstrap",
+    "release": "lerna publish",
+    "release:yes": "lerna publish",
     "test": "cd packages/cli-utils/tests && ./tests.sh",
     "eslint": "eslint --ext .js,.jsx .",
     "eslint:fix": "npm run eslint -- --fix"

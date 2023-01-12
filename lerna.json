@@ -8,7 +8,6 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "exact": true,
       "conventionalCommits": true,
       "conventionalPrerelease": true,
       "ignoreChanges": [
