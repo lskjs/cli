@@ -54,7 +54,7 @@ function spawn(command, args = [], options = {}) {
       // if (trace) {
       // trace("<<<", command, args.join(" "));
       // }
-      if (!silence && code && fatal) fatal({ code });
+      // if (!silence && code && fatal) fatal({ code });
       if (!code) {
         resolve(proc);
         return;

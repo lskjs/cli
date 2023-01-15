@@ -28,8 +28,10 @@ const run = async (main) => {
     // console.log('run CONTEXT?', { shell, filename, args, options2, props });
     // console.log('run CONTEXT?', { options2, props });
     return main(props).catch((err) => {
-      console.log(err, props);
-      log.fatal(`========= ERR${err.code ? ` (CODE: ${err.code})` : ''}  ${123} filename?? =======`);
+      log.fatal(`========= ERR${err.code ? ` (CODE: ${err.code})` : ''} =======`);
+      if (err?.proc) log.fatal(err?.proc?.spawnargs?.[2]);
+      log.fatal(props);
+      log.fatal(`========= ERR${err.code ? ` (CODE: ${err.code})` : ''} =======`);
       if (!err.code) log.error(err);
       if (err.stdout) log.error(err.stdout);
       if (err.stderr) log.error(err.stderr);
