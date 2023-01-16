@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-const { run, lerna } = require('@lskjs/cli-utils');
+const { run, shell } = require('@lskjs/cli-utils');
 
 const main = async () => {
-  const argv = process.argv.slice(2);
-  await lerna(`exec -- lsk run test -- ${argv.join(' ')}`);
+  await shell('lsk run test:jest');
+  await shell('lsk run test:eslint');
+  await shell('lsk run test:size-limit');
 };
 
-run(main);
+module.exports = run(main);

@@ -1,9 +1,12 @@
 #!/usr/bin/env node
-const { run, lernaParallel } = require('@lskjs/cli-utils');
+const { run, shell } = require('@lskjs/cli-utils');
 
-// @TODO: extract env file
-const main = async () => {
-  await lernaParallel(`exec --no-prefix -- npm run start`);
-};
+async function main({ isRoot } = {}) {
+  if (isRoot) {
+    await shell(`pnpm -r run build`);
+  } else {
+    await shell('node lib');
+  }
+}
 
-run(main);
+module.exports = run(main);

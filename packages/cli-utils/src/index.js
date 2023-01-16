@@ -15,6 +15,7 @@ const { lerna } = require('./lerna');
 const { lernaParallel } = require('./lernaParallel');
 const { copy } = require('./copy');
 const { link } = require('./link');
+const { joinArgs } = require('./joinArgs');
 const { linkAll } = require('./linkAll');
 const { log } = require('./log');
 const { mergePackageJson } = require('./mergePackageJson');
@@ -25,6 +26,8 @@ const { rootPath } = require('./rootPath');
 const { rsync } = require('./rsync');
 const { run } = require('./run');
 const { shell } = require('./shell');
+const { shellParallel } = require('./shellParallel');
+const cwdInfos = require('./cwdInfo');
 
 module.exports = {
   checkSoft,
@@ -44,6 +47,7 @@ module.exports = {
   lerna,
   lernaParallel,
   copy,
+  joinArgs,
   link,
   linkAll,
   log,
@@ -54,5 +58,7 @@ module.exports = {
   rsync,
   run,
   shell,
+  shellParallel,
   pathexec,
+  ...cwdInfos,
 };

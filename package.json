@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@lskjs/cli-utils": "^3.0.0-alpha.3",
-    "@lskjs/eslint-config": "2.17.0",
-    "eslint": "8.31.0",
+    "@lskjs/eslint-config": "2.21.0",
+    "eslint": "8.32.0",
     "lerna": "6.4.1",
     "typescript": "4.9.4"
   },

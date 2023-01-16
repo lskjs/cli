@@ -1,45 +1,55 @@
 /* eslint-disable array-callback-return */
 const { getNpmGlobal } = require('./getNpmGlobal');
+const { getLskConfig } = require('./getLskConfig');
 const path = require('path');
 
 const getPaths = (params = {}) => {
-  // eslint-disable-next-line no-param-reassign
-  if (typeof params === 'string') params = { name: params };
+  const { cwd = process.cwd(), name = '' } = params;
+  const scriptPath = `scripts/run/${name}`;
+  const lskrc = params.lskrc !== false ? getLskConfig({ cwd }) : {};
+  const pathexecConfig = lskrc?.pathexec;
+  const dirs = pathexecConfig ? pathexecConfig.dirs : 4;
+  const local = pathexecConfig ? pathexecConfig.local : true;
+  const nodemodules = pathexecConfig ? pathexecConfig.nodemodules : true;
   let { exts } = params;
-  const { cwd = process.cwd(), dirs = 4, local = true, nodemodules = true, name = '' } = params;
+  if (!exts) exts = [''];
+  const paths = (pathexecConfig?.paths || [])
+    .map((prefix) => exts.map((ext) => path.resolve(`${prefix}/${scriptPath}${ext}`)))
+    .flat();
+  if (paths.length) return paths;
 
   // console.time('[getNpmGlobal]');
   const globalNodemodules = [getNpmGlobal(), `/usr/local/lib`].filter(Boolean); // TODO: npm root -g
   // console.timeEnd('[getNpmGlobal]');
   const nodemodulesPostfix = '/node_modules/@lskjs/cli-scripts';
 
-  if (!exts) exts = [''];
-  const paths = [];
   if (local) {
     [...Array(dirs)].map((_, deep) => {
       const dir = `${cwd}/${'../'.repeat(deep)}`;
-      paths.push(...exts.map((ext) => path.resolve(`${dir}/${name}${ext}`)));
+      paths.push(...exts.map((ext) => path.resolve(`${dir}/${scriptPath}${ext}`)));
       if (nodemodules) {
-        paths.push(...exts.map((ext) => path.resolve(`${dir}/${nodemodulesPostfix}/${name}${ext}`)));
+        paths.push(...exts.map((ext) => path.resolve(`${dir}/${nodemodulesPostfix}/${scriptPath}${ext}`)));
       }
     });
   }
   if (nodemodules) {
     paths.push(
-      ...exts.map((ext) => path.resolve(`${process.env.HOME}/projects/lskjs-cli/packages/cli-scripts/${name}${ext}`)),
+      ...exts.map((ext) =>
+        path.resolve(`${process.env.HOME}/projects/lskjs-cli/packages/cli-scripts/${scriptPath}${ext}`),
+      ),
     );
     globalNodemodules.forEach((dir) => {
-      paths.push(...exts.map((ext) => path.resolve(`${dir}${nodemodulesPostfix}/${name}${ext}`)));
+      paths.push(...exts.map((ext) => path.resolve(`${dir}${nodemodulesPostfix}/${scriptPath}${ext}`)));
     });
     globalNodemodules.forEach((dir) => {
       paths.push(
-        ...exts.map((ext) => path.resolve(`${dir}/node_modules/@lskjs/cli/${nodemodulesPostfix}/${name}${ext}`)),
+        ...exts.map((ext) => path.resolve(`${dir}/node_modules/@lskjs/cli/${nodemodulesPostfix}/${scriptPath}${ext}`)),
       );
     });
     globalNodemodules.forEach((dir) => {
       paths.push(
         ...exts.map((ext) =>
-          path.resolve(`${dir}/node_modules/lsk/node_modules/@lskjs/cli/${nodemodulesPostfix}/${name}${ext}`),
+          path.resolve(`${dir}/node_modules/lsk/node_modules/@lskjs/cli/${nodemodulesPostfix}/${scriptPath}${ext}`),
         ),
       );
     });
