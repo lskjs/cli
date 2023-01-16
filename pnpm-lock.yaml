@@ -22,8 +22,8 @@ importers:
   packages/cli:
     specifiers:
       '@babel/runtime': 7.18.3
-      '@lskjs/cli-scripts': ^3.0.0-alpha.4
-      '@lskjs/cli-utils': ^3.0.0-alpha.4
+      '@lskjs/cli-scripts': ^3.0.0-alpha.5
+      '@lskjs/cli-utils': ^3.0.0-alpha.5
       '@lskjs/err': 2.65.1
       '@lskjs/log': 2.75.1
       '@oclif/command': 1.8.16
@@ -61,7 +61,7 @@ importers:
   packages/cli-scripts:
     specifiers:
       '@commitlint/cli': 17.0.2
-      '@lskjs/cli-utils': ^3.0.0-alpha.4
+      '@lskjs/cli-utils': ^3.0.0-alpha.5
       '@lskjs/err': 2.65.1
       '@lskjs/stringify': ^2.85.1
       all-contributors-cli: ^6.20.0
@@ -153,7 +153,7 @@ importers:
 
   packages/lsk:
     specifiers:
-      '@lskjs/cli': ^3.0.0-alpha.4
+      '@lskjs/cli': ^3.0.0-alpha.5
     dependencies:
       '@lskjs/cli': link:../cli
 

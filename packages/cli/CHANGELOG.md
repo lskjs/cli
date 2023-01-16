@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.5](https://github.com/lskjs/cli/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2023-01-16)
+
+
+### Features
+
+* improve pathexec ([25bf17f](https://github.com/lskjs/cli/commit/25bf17fd9198a68c964315ee5d2791a751cf1b6b))
+
+
+
+
+
 # [3.0.0-alpha.4](https://github.com/lskjs/cli/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2023-01-15)
 
 **Note:** Version bump only for package @lskjs/cli
