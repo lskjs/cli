@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.7](https://github.com/lskjs/cli/compare/v3.0.0-alpha.5...v3.0.0-alpha.7) (2023-01-17)
+
+
+### Features
+
+* a lot of script fixes ([f6f5c76](https://github.com/lskjs/cli/commit/f6f5c763eaa043d48ccad9694b6d9407cc155075))
+
+
+
+
+
 # [3.0.0-alpha.6](https://github.com/lskjs/cli/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2023-01-17)
 
 
