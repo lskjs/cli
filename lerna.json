@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0-alpha.6",
   "packages": [
     "packages/*",
     "packages/cli-scripts/files"
@@ -15,7 +15,7 @@
         "ignored-file",
         "*.md"
       ],
-      "message": "chore(release): 🎉 publish v%s"
+      "message": "chore(release): 🎉 publish %s"
     }
   }
 }

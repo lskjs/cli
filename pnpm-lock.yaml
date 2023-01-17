@@ -4,26 +4,23 @@ importers:
 
   .:
     specifiers:
-      '@lskjs/cli-utils': workspace:3.0.0-alpha.5
       '@lskjs/eslint-config': 2.21.0
       eslint: 8.32.0
       lerna: 6.4.1
       tslib: ^2.4.1
       typescript: 4.9.4
-    dependencies:
-      tslib: 2.4.1
     devDependencies:
-      '@lskjs/cli-utils': link:packages/cli-utils
       '@lskjs/eslint-config': 2.21.0
       eslint: 8.32.0
       lerna: 6.4.1
+      tslib: 2.4.1
       typescript: 4.9.4
 
   packages/cli:
     specifiers:
       '@babel/runtime': 7.18.3
-      '@lskjs/cli-scripts': ^3.0.0-alpha.5
-      '@lskjs/cli-utils': ^3.0.0-alpha.5
+      '@lskjs/cli-scripts': ^3.0.0-alpha.6
+      '@lskjs/cli-utils': ^3.0.0-alpha.6
       '@lskjs/err': 2.65.1
       '@lskjs/log': 2.75.1
       '@oclif/command': 1.8.16
@@ -61,7 +58,8 @@ importers:
   packages/cli-scripts:
     specifiers:
       '@commitlint/cli': 17.4.2
-      '@lskjs/cli-utils': ^3.0.0-alpha.5
+      '@lskjs/algos': 3.0.0-alpha.10
+      '@lskjs/cli-utils': ^3.0.0-alpha.6
       '@lskjs/env': 3.0.0-alpha.8
       '@lskjs/err': 3.0.0-alpha.8
       '@lskjs/stringify': ^2.85.1
@@ -73,6 +71,7 @@ importers:
       remark-template: 1.6.0
     dependencies:
       '@commitlint/cli': 17.4.2
+      '@lskjs/algos': 3.0.0-alpha.10
       '@lskjs/cli-utils': link:../cli-utils
       '@lskjs/env': 3.0.0-alpha.8
       '@lskjs/err': 3.0.0-alpha.8
@@ -155,7 +154,7 @@ importers:
 
   packages/lsk:
     specifiers:
-      '@lskjs/cli': ^3.0.0-alpha.5
+      '@lskjs/cli': ^3.0.0-alpha.6
     dependencies:
       '@lskjs/cli': link:../cli
 
@@ -3627,8 +3626,8 @@ packages:
       write-file-atomic: 4.0.2
     dev: true
 
-  /@lskjs/algos/3.0.0-alpha.8:
-    resolution: {integrity: sha512-oyvHCGWM+o2ngZL5tolq3B8Qg4LG/GCgM0FaopQg1wReZNzEly5LL8CPjXs/UjQiDyda1TFXdApisJ/c12I5KQ==}
+  /@lskjs/algos/3.0.0-alpha.10:
+    resolution: {integrity: sha512-5bwD+a9L2JNk9+ZB7eENj+1HgWIxu0HyQaZdtSm90tmHowoi2fsG0l/F8GirNvFEAs5B6n0ppKI7P7TOloTN6Q==}
     dev: false
 
   /@lskjs/babel-preset/2.10.0_@babel+core@7.17.5:
@@ -3758,7 +3757,7 @@ packages:
   /@lskjs/err/3.0.0-alpha.8:
     resolution: {integrity: sha512-Oaw3st/wxJRz4ZRV2d3r8QpbDOnIZ8smDEocyqrqcCa2Iiv1Rm9NzJyuLwo2XIjMNFkmYSVUx4rkWsFYpGLdzg==}
     dependencies:
-      '@lskjs/algos': 3.0.0-alpha.8
+      '@lskjs/algos': 3.0.0-alpha.10
     dev: false
 
   /@lskjs/eslint-config/2.10.0_typescript@4.6.2:

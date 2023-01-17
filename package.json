@@ -12,7 +12,7 @@
     "release:yes": "lerna publish"
   },
   "devDependencies": {
-    "@lskjs/cli-utils": "workspace:3.0.0-alpha.5",
+    "tslib": "^2.4.1",
     "@lskjs/eslint-config": "2.21.0",
     "eslint": "8.32.0",
     "lerna": "6.4.1",
@@ -32,8 +32,5 @@
     "test": "cd packages/cli-utils/tests && ./tests.sh",
     "eslint": "eslint --ext .js,.jsx .",
     "eslint:fix": "npm run eslint -- --fix"
-  },
-  "dependencies": {
-    "tslib": "^2.4.1"
   }
 }
