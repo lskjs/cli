@@ -27,10 +27,10 @@ const getPackageName = ({ cwd }) => {
 };
 
 const getCwdInfo = ({ cwd }) => {
-  const isJs = existsSync(`${cwd}/.babelrc`);
+  const isJs = existsSync(`${cwd}/.babelrc.js`) || existsSync(`${cwd}/.babelrc`);
   const isTs = existsSync(`${cwd}/tsconfig.json`);
   // eslint-disable-next-line import/no-dynamic-require
-  const isLib = !!require(`${cwd}/package.json`).scripts?.start;
+  const isLib = !require(`${cwd}/package.json`).scripts?.start;
   const isNest = existsSync(`${cwd}/nest-cli.json`);
   // const isRoot = isRoot({ cwd });
   // const isPackage = isPackage({ cwd });

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const { run, shell, findBin } = require('@lskjs/cli-utils');
+const { run, shell, findBin, shellParallel } = require('@lskjs/cli-utils');
 
-const main = async ({ isRoot } = {}) => {
+const main = async ({ isRoot, ctx } = {}) => {
   if (isRoot) {
-    await shell('pnpm -r exec test:eslint');
+    await shellParallel('lsk run test:eslint', { ctx });
   } else {
-    await shell(`${findBin('eslint')} src`);
+    await shell(`${findBin('eslint')} src`, { ctx });
   }
 };
 

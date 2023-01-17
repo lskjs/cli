@@ -1,17 +1,17 @@
 #!/usr/bin/env node
-const { shell, run, findBin, shellParallel } = require('@lskjs/cli-utils');
+const { shell, run, findBin, shellParallel, getCwdInfo } = require('@lskjs/cli-utils');
 
-async function main({ isRoot, ctx, args }) {
+async function main({ isRoot, ctx, args, cwd }) {
   if (isRoot) {
     await shellParallel(`lsk run build:nest`, { ctx });
     return;
-  } 
+  }
   const isWatch = args.includes('--watch');
-  if (isWatch) {
-    await shell(`${findBin('nest')} start --debug --watch`, { ctx });
-    } else {
-      await shell(`${findBin('nest')} build`, { ctx });
-    }
+  const { isLib } = getCwdInfo({ cwd });
+  let cmd = findBin('nest');
+  if (!isLib) cmd = `${cmd} start --debug`;
+  if (isWatch) cmd = `${cmd} --watch`;
+  await shell(cmd, { ctx });
 }
 
 run(main);

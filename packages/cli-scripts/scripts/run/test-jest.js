@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const { run, shell, findBin } = require('@lskjs/cli-utils');
+const { run, shell, findBin, shellParallel } = require('@lskjs/cli-utils');
 
-const main = async ({ isRoot, cwd } = {}) => {
+const main = async ({ isRoot, cwd, ctx } = {}) => {
   if (isRoot) {
-    await shell('pnpm -r exec test:jest');
+    await shellParallel('lsk run test:jest', { ctx });
   } else {
-    await shell(`${findBin('jest')} --coverage --config ../../scripts/jest.config.json --rootDir ${cwd}`);
+    await shell(`${findBin('jest')} --coverage --config ../../scripts/jest.config.json --rootDir ${cwd}`, {ctx});
   }
 };
 

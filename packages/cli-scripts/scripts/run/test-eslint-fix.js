@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const { run, shell, findBin } = require('@lskjs/cli-utils');
+const { run, shell, findBin, shellParallel } = require('@lskjs/cli-utils');
 
-const main = async ({ isRoot } = {}) => {
+const main = async ({ isRoot, ctx } = {}) => {
   if (isRoot) {
-    await shell(`${findBin('eslint')} --fix package.json`);
-    await shell('pnpm -r exec lsk run test:eslint-fix');
+    await shell(`${findBin('eslint')} --fix package.json`, { ctx });
+    await shellParallel('lsk run test:eslint-fix', { ctx });
   } else {
-    await shell(`${findBin('eslint')} --fix package.json src`);
+    await shell(`${findBin('eslint')} --fix package.json src`, { ctx });
   }
 };
 

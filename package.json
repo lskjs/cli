@@ -12,7 +12,7 @@
     "release:yes": "lerna publish"
   },
   "devDependencies": {
-    "@lskjs/cli-utils": "^3.0.0-alpha.3",
+    "@lskjs/cli-utils": "workspace:3.0.0-alpha.5",
     "@lskjs/eslint-config": "2.21.0",
     "eslint": "8.32.0",
     "lerna": "6.4.1",

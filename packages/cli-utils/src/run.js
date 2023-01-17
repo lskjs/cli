@@ -49,12 +49,17 @@ const run = async (main) => {
     // console.log('[runnable]', props);
     return main(props).catch((err) => {
       const errTitle = `========= ========= [Err] ${err.code || ''} ======= =========`;
+      // eslint-disable-next-line no-console
+      console.log('\n\n\n\n');
       log.fatal();
       log.fatal(errTitle);
       log.fatal();
       if (props.args?.length) log.fatal(`[>>] lsk run ${props.args.slice(1).join(' ')}`);
       if (err?.proc?.spawnargs) log.fatal('[>>]', joinArgs(err?.proc?.spawnargs));
-      log.fatal('[Err]', err.message || err.code || err);
+      if (err.code) log.fatal('[Err]', err.code);
+      if (err.message) log.fatal('[Err]', err.message);
+      if (err.stack) log.fatal('[Err]', err);
+      // log.fatal('[Err]', err.message || err.proc._events);
       if (props.ctx?.stack) {
         log.fatal();
         if (props.cwd) log.fatal(`[cwd] ${props.cwd}`);
